@@ -2,18 +2,21 @@ import { useState } from "react";
 import { formatDate } from "../../utils/formatedDate";
 import { FiSearch } from "react-icons/fi";
 import { CiCirclePlus } from "react-icons/ci";
-import { RiNotification2Line } from "react-icons/ri";
 import React from "react";
+import { Link } from "react-router-dom";
+
 const TopNavbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [level, setLevel] = useState("O-Level"); // Initial level set to "O-Level"
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
   };
+
   const currentDate = new Date();
 
   return (
-    <nav className="border-b py-4 px-2 text-white sticky top-0 z-10 w-full ">
+    <nav className="border-b py-4 px-2 text-white sticky top-0 z-10 w-full bg-gray-800">
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex flex-col">
           <h1 className="text-2xl font-bold text-white">Hello, Calvin</h1>
@@ -21,7 +24,7 @@ const TopNavbar = () => {
             {formatDate(currentDate)}
           </p>
         </div>
-        <div className="relative flex flex-1 mx-4 max-w-[352px]  h-[56px] items-center justify-center">
+        <div className="relative flex flex-1 mx-4 max-w-[352px] h-[56px] items-center justify-center">
           <input
             type="text"
             placeholder="Search..."
@@ -29,20 +32,22 @@ const TopNavbar = () => {
           />
           <FiSearch className="absolute right-3 top-5 text-gray-500" />
         </div>
-        <button
-          type="button"
+
+        <Link
+          to="/dashboard/schools/add-student"
           className="py-4 px-6 flex items-center justify-center bg-purple-700 rounded-lg text-white gap-2"
         >
           <CiCirclePlus size={24} />
           Add Student
-        </button>
-        <button
-          type="button"
+        </Link>
+        <Link
+          to="/dashboard/schools/add-school"
           className="py-4 px-6 flex items-center justify-center border border-white rounded-lg text-white gap-2"
         >
           <CiCirclePlus size={24} />
           Add School
-        </button>
+        </Link>
+
         <div className="relative ml-4">
           <div
             className="flex items-center cursor-pointer py-2 px-3 rounded-lg"
@@ -50,7 +55,7 @@ const TopNavbar = () => {
           >
             <div className="w-10 h-10 rounded-lg overflow-hidden border-2 text-gray-300 border-[#D2F2F7]">
               <img
-                src="/images/girl-student.png" 
+                src="/images/girl-student.png"
                 className="rounded"
                 alt="user-1"
                 height={40}
@@ -96,6 +101,19 @@ const TopNavbar = () => {
           )}
         </div>
       </div>
+
+      {/* Conditionally render combinations if level is "A-Level" */}
+      {level === "A-Level" && (
+        <div className="combinations-section mt-4">
+          <h2 className="text-lg font-bold">Combinations</h2>
+          <ul>
+            <li>MCB</li>
+            <li>PCB</li>
+            <li>MCE</li>
+            {/* Add more combinations as needed */}
+          </ul>
+        </div>
+      )}
     </nav>
   );
 };

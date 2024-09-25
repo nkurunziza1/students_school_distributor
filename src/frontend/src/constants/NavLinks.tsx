@@ -5,12 +5,10 @@ import { CiHome } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import clsx from "clsx";
 
-// Navigation Links for the app
 const links = [
   { name: 'Dashboard', href: '/dashboard', icon: CiHome },
   { name: 'Schools', href: '/dashboard/schools', icon: FaSchool },
-  { name: 'Exams Results', href: '/dashboard/exams-results', icon: FaChartBar },
-  { name: 'Suggestions', href: '/dashboard/suggestions', icon: BsFillBookmarksFill },
+  { name: 'Distributions', href: '/dashboard/distributions', icon: BsFillBookmarksFill },
   { name: 'Settings', href: '/dashboard/settings', icon: FaCog },
 ];
 

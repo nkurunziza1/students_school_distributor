@@ -155,3 +155,43 @@ export const universities = [
     website: "https://www.u-tokyo.ac.jp"
   }
 ];
+
+
+export const schools = [
+  {
+    name: "ST Joseph",
+    status: "Excellent",
+    level: "A-Level",
+    combinations: ["MCB", "PCM", "MEG"],
+    capacity: 100,
+  },
+  {
+    name: "Lycee de Kigali",
+    status: "Very Good",
+    level: "O-Level",
+    combinations: ["MCE", "PCB", "LEG"],
+    capacity: 80,
+  },
+  {
+    name: "Green Hills Academy",
+    status: "Good",
+    level: "A-Level",
+    combinations: ["PCM", "MPC", "MEG"],
+    capacity: 90,
+  },
+  {
+    name: "Kigali International School",
+    status: "Excellent",
+    level: "O-Level",
+    combinations: ["MCB", "HEG", "MPG"],
+    capacity: 120,
+  },
+  {
+    name: "Ecole Belge",
+    status: "Good",
+    level: "A-Level",
+    combinations: ["PCM", "MPC", "MCB"],
+    capacity: 70,
+  },
+];
+
