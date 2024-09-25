@@ -13,11 +13,11 @@ const TopNavbar = () => {
   const currentDate = new Date();
 
   return (
-    <nav className="border-b p-4 text-black sticky top-0 bg-white z-10 w-full">
+    <nav className="border-b py-4 px-2 text-white sticky top-0 z-10 w-full ">
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex flex-col">
-          <h1 className="text-2xl font-bold text-slate-700">Hello, Calvin</h1>
-          <p className="text-sm font-light text-slate-600">
+          <h1 className="text-2xl font-bold text-white">Hello, Calvin</h1>
+          <p className="text-sm font-light text-white">
             {formatDate(currentDate)}
           </p>
         </div>
@@ -25,28 +25,32 @@ const TopNavbar = () => {
           <input
             type="text"
             placeholder="Search..."
-            className="w-full p-2 pl-4 pr-8 bg-[#F5F5F5] border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            className="w-full p-2 pl-4 pr-8 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
           />
           <FiSearch className="absolute right-3 top-5 text-gray-500" />
         </div>
         <button
           type="button"
-          className="py-4 px-6 flex items-center justify-center bg-primary-2 rounded-lg text-white gap-2"
+          className="py-4 px-6 flex items-center justify-center bg-purple-700 rounded-lg text-white gap-2"
         >
           <CiCirclePlus size={24} />
-          Create Client
+          Add Student
         </button>
-        <div className=" p-3 bg-[#F5F5F5] rounded-lg">
-          <RiNotification2Line size={24} />
-        </div>
+        <button
+          type="button"
+          className="py-4 px-6 flex items-center justify-center border border-white rounded-lg text-white gap-2"
+        >
+          <CiCirclePlus size={24} />
+          Add School
+        </button>
         <div className="relative ml-4">
           <div
-            className="flex items-center cursor-pointer bg-[#F5F5F5] py-2 px-3 rounded-lg"
+            className="flex items-center cursor-pointer py-2 px-3 rounded-lg"
             onClick={toggleDropdown}
           >
-            <div className="w-10 h-10 rounded-lg overflow-hidden border-2 border-[#D2F2F7]">
+            <div className="w-10 h-10 rounded-lg overflow-hidden border-2 text-gray-300 border-[#D2F2F7]">
               <img
-                src="/images/girl-student.png"
+                src="/images/girl-student.png" 
                 className="rounded"
                 alt="user-1"
                 height={40}
@@ -54,7 +58,7 @@ const TopNavbar = () => {
               />
             </div>
             <svg
-              className="ml-2 w-4 h-4 text-gray-800"
+              className="ml-2 w-4 h-4 text-gray-100"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

@@ -1,9 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { NavLinks } from "../constants";
-//import { Avatar, Menu, MenuItem, IconButton } from "@mui/material";
-// import MenuIcon from "@mui/icons-material/Menu";
-// import CloseIcon from "@mui/icons-material/Close";
 import React from "react";
 
 const Navbar = () => {
@@ -13,12 +10,10 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const open = Boolean(anchorEl);
 
-  // Update active link on route change
   useEffect(() => {
     setActiveLink(location.pathname);
   }, [location]);
 
-  // Handle dropdown open/close
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
@@ -27,16 +22,16 @@ const Navbar = () => {
     setAnchorEl(null);
   };
 
-  // Toggle mobile menu
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
   return (
-    <section className="w-full flex justify-between items-center py-4 px-5 md:px-20 border-b-2 bg-gray-800 sticky top-0 z-40">
+    <section className="w-full flex justify-between items-center py-4 px-5 md:px-20 bg-[#270C4A] sticky top-0 z-40">
       {/* Logo */}
-      <Link to="/" className="text-xl font-bold text-white">
-        LOGO
+      <Link to="/" className="text-xl font-bold text-white flex items-center justify-start w-1/2">
+      <img src="/icons/logo001.svg" width={40} height={40}/>
+        AI-NESA
       </Link>
 
       {/* Hamburger Menu Icon for Small Screens */}
@@ -57,8 +52,8 @@ const Navbar = () => {
             key={index}
             to={item.link}
             className={`text-sm ${activeLink === item.link
-                ? "text-red-600 font-bold"
-                : "text-white hover:text-blue-400"
+                ? "text-purple-600 font-semibold"
+                : "text-white hover:text-purple-400"
               }`}
           >
             {item.label}
@@ -67,10 +62,18 @@ const Navbar = () => {
         <Link
           to="/register"
           onClick={toggleMobileMenu} // Close menu when clicked
-          className="text-sm text-white hover:text-white bg-blue-500 py-2 px-3 font-bold rounded-full"
+          className="text-sm text-white hover:text-white bg-purple-500 py-2 px-3 font-bold rounded-full"
         >
-          Apply University
+          Contact Us
         </Link>
+        <Link
+          to="/login"
+          onClick={toggleMobileMenu} // Close menu when clicked
+          className="text-sm text-white hover:text-white py-2 px-5 font-bold border border-purple-300"
+        >
+          Log in
+        </Link>
+        
       </div>
 
       {/* Profile Icon with Dropdown */}
@@ -121,7 +124,7 @@ const Navbar = () => {
               to={item.link}
               onClick={toggleMobileMenu} // Close menu when a link is clicked
               className={`text-sm ${activeLink === item.link
-                  ? "text-red-600 font-bold"
+                  ? "text-purple-600 font-semibold"
                   : "text-white hover:text-orange-400"
                 }`}
             >

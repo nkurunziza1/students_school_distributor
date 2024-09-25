@@ -1,25 +1,26 @@
-export const NavLinks=[
+export const NavLinks = [
   {
-    link:"/Home",
-    label:"Universities"
+    link: "/",
+    label: "Home",
   },
   {
-    link:"/events",
-    label:"Events"
-  }, 
-  {
-    link:"/about",
-    label:"About Us"
-  }, 
-  {
-    link:"/portfolio",
-    label:"Our Portfolio"
+    link: "/results",
+    label: "View Results",
   },
   {
-    link:"/dashboard",
-    label:"Dashboard"
-  }  
-]
+    link: "/events",
+    label: "Events",
+  },
+  {
+    link: "/about",
+    label: "About Us",
+  },
+  {
+    link: "/dashboard",
+    label: "dashboard",
+  },
+];
+
 
 
 export const universities = [
