@@ -55,7 +55,6 @@ const Home = () => {
       {authenticated && ( */}
         <>
           <Hero />
-          <AboutSection/>
         </>
       {/* )} */}
 
