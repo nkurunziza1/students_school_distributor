@@ -3,217 +3,167 @@ import { Server, StableBTreeMap, ic, Principal, Result } from "azle";
 import express from "express";
 import cors from "cors";
 
-type Department = {
-  id: string;
-  name: string;
-  universityId: string;
-  hodId: string;
-};
+enum Status {
+  EXCELLENT = "excellent",
+  GOOD = "good",
+  NORMAL = "normal",
+  DAILY = "daily",
+}
 
-type University = {
+type School = {
   id: string;
   name: string;
-  location: string;
-  programs: string[];
+  status: Status;
+  level: "O-Level" | "A-Level";
+  combinations?: string[];
   owner: string;
+  capacity: number;
+  availableSlots:
+    | number
+    | Record<string, { totalSlots: number; remainingSlots: number }>;
+  otherSchoolDetails: any;
 };
 
 type Student = {
   id: string;
   name: string;
-  universityId: string;
-  programId: string;
-  year: number;
+  score: number;
+  preference: string[];
+  selectedCombination?: Array<{
+    combinationName: string;
+    School: string;
+  }>;
+  level: "O-Level" | "P-Level";
+  registrationNumber: string;
 };
 
-type Teacher = {
-  id: string;
-  name: string;
-  universityId: string;
-  courses: string[];
-};
-
-type HOD = {
-  id: string;
-  name: string;
-  universityId: string;
-  departmentId: string;
-};
-
-type Program = {
-  id: string;
-  name: string;
-  universityId: string;
-  years: number;
-  courses: string[];
-};
-
-const universities = StableBTreeMap<string, University>(0);
-const students = StableBTreeMap<string, Student>(1);
-const teachers = StableBTreeMap<string, Teacher>(2);
-const hods = StableBTreeMap<string, HOD>(3);
-const programs = StableBTreeMap<string, Program>(4);
-const departments = StableBTreeMap<string, Department>(5);
+const schoolStorage = StableBTreeMap<string, School>(0);
+const studentStorage = StableBTreeMap<string, Student>(1);
+const GeneratedDistributed = StableBTreeMap<string, string>(6);
 
 export default Server(() => {
   const app = express();
   app.use(cors());
   app.use(express.json());
 
-  app.post("/universities", (req, res) => {
-    const { name, location, programs } = req.body;
-    const university: University = {
-      id: uuidv4(),
-      name,
-      location,
-      programs,
-      owner: ic.caller().toText(),
-    };
-    universities.insert(university.id, university);
-    res.json(university);
-  });
+  //School endpoints
+  //<-- Create a new school -->
 
-  //get universities
-  app.get("/universities", (req, res) => {
+  app.post("/schools", (req, res) => {
+    const {
+      name,
+      level,
+      combinations,
+      capacity,
+      status = Status.EXCELLENT,
+    } = req.body;
+
+    // Check if the user is logged in
+    if (!ic.caller().toText()) {
+      return res.status(401).json({ message: "Unauthorized" });
+    }
+
+    if (level === "A-Level" && !combinations) {
+      return res
+        .status(400)
+        .json({ message: "Advanced level schools require combinations" });
+    }
+
     try {
-      const universitiesList = universities.values();
-      res.json(universitiesList);
+      let availableSlots: {
+        [x: string]: {
+          totalSlots: number;
+          remainingSlots: number;
+        };
+      };
+
+      //For A-level
+      if (level === "A-Level") {
+        availableSlots = {};
+        combinations.forEach((combination: string) => {
+          availableSlots[combination] = {
+            totalSlots: Math.floor(capacity / combinations.length),
+            remainingSlots: Math.floor(capacity / combinations.length),
+          };
+        });
+      } else {
+        // For O-Level, use overall capacity
+        availableSlots = capacity;
+      }
+
+      const school: School = {
+        id: uuidv4(),
+        name,
+        status,
+        level,
+        combinations: level === "A-Level" ? combinations : null,
+        owner: ic.caller().toText(),
+        capacity,
+        availableSlots,
+        otherSchoolDetails: [],
+      };
+
+      schoolStorage.insert(school.id, school);
+      res.json(school);
     } catch (error) {
-      console.error("Error fetching universities:", error);
-      res.status(500).json({ error: "Internal server error" });
+      console.error("Error creating school:", error);
+      res.status(500).json({ message: "Internal Server Error" });
     }
   });
 
-  // Student Registration
-  app.post("/students", (req, res) => {
-    const { name, universityId, programId, year } = req.body;
+  //<-- Get registered schools -->
+
+  app.get("/schools", (req, res) => {
+    const schoolList = schoolStorage.values();
+    res.json(schoolList);
+  });
+
+  // Endpoints for student
+  //<-- Register a student -->
+
+  app.post("/student", (req, res) => {
+    const {
+      name,
+      score,
+      preference,
+      registrationNumber,
+      selectedCombination,
+      level,
+    } = req.body;
+
+    if (level === "O-Level" && !selectedCombination) {
+      return res
+        .status(400)
+        .json({ message: "A-Level students must choose a combination" });
+    }
+
     const student: Student = {
       id: uuidv4(),
       name,
-      universityId,
-      programId,
-      year,
+      score,
+      preference,
+      selectedCombination: level === "O-Level" ? selectedCombination : null,
+      level,
+      registrationNumber,
     };
-    students.insert(student.id, student);
+    studentStorage.insert(student.id, student);
     res.json(student);
   });
 
-  // Teacher Registration
-  app.post("/teachers", (req, res) => {
-    const { name, universityId, courses } = req.body;
-    const teacher: Teacher = {
-      id: uuidv4(),
-      name,
-      universityId,
-      courses,
-    };
-    teachers.insert(teacher.id, teacher);
-    res.json(teacher);
+  // Endpoint for registered students
+  app.get("/students", (req, res) => {
+    const studentsList = studentStorage.values();
+    res.json(studentsList);
   });
 
-  // HOD Registration
-  app.post("/hods", (req, res) => {
-    const { name, universityId, departmentId } = req.body;
-    const hod: HOD = {
-      id: uuidv4(),
-      name,
-      universityId,
-      departmentId,
-    };
-    hods.insert(hod.id, hod);
-
-    // Update department's HOD
-    const departmentOpt = departments.get(departmentId);
-    if ("Some" in departmentOpt) {
-      const department = departmentOpt.Some;
-      department.hodId = hod.id;
-      departments.insert(departmentId, department);
-    }
-
-    res.json(hod);
-  });
-
-  app.get("/department-hod/:departmentId", (req, res) => {
-    const departmentId = req.params.departmentId;
-    const departmentOpt = departments.get(departmentId);
-    if ("Some" in departmentOpt) {
-      const hodId = departmentOpt.Some.hodId;
-      const hodOpt = hods.get(hodId);
-      if ("Some" in hodOpt) {
-        res.json(hodOpt.Some);
-      } else {
-        res.status(404).send("HOD not found");
-      }
-    } else {
-      res.status(404).send("Department not found");
-    }
-  });
-
-  //Departments registrations
-  app.post("/departments", (req, res) => {
-    const { name, universityId } = req.body;
-    const department: Department = {
-      id: uuidv4(),
-      name,
-      universityId,
-      hodId: "", // Will be set when HOD is assigned
-    };
-    departments.insert(department.id, department);
-
-    // Update university's departments
-    const universityOpt = universities.get(universityId);
-    if ("Some" in universityOpt) {
-      const university = universityOpt.Some;
-      university.departments.push(department.id);
-      universities.insert(universityId, university);
-    }
-    res.json(department);
-  });
-
-  // Program Creation (for universities)
-  app.post("/programs", (req, res) => {
-    const { name, departmentId, years, courses } = req.body;
-    const program: Program = {
-      id: uuidv4(),
-      name,
-      departmentId,
-      years,
-      courses,
-    };
-    programs.insert(program.id, program);
-    res.json(program);
-  });
-
-  // Assign Course to Teacher (for HODs)
-  app.post("/assign-course", (req, res) => {
-    const { teacherId, courseId } = req.body;
-    const teacherOpt = teachers.get(teacherId);
-    if ("None" in teacherOpt) {
-      res.status(404).send("Teacher not found");
-    } else {
-      const teacher = teacherOpt.Some;
-      teacher.courses.push(courseId);
-      teachers.insert(teacherId, teacher);
-      res.json(teacher);
-    }
-  });
-
-  // Get Students for a Course (for Teachers)
-  app.get("/course-students/:courseId", (req, res) => {
-    const courseId = req.params.courseId;
-    const courseStudents = students.values().filter((student) => {
-      const programOpt = programs.get(student.programId);
-      return "Some" in programOpt && programOpt.Some.courses.includes(courseId);
+  // Endpoint for distributing students to schools
+  app.post("/distribute-students", (req, res) => {
+    // Placeholder for AI-based distribution logic
+    // Use students, schools, and their preferences/scores to perform the distribution
+    // AI logic will assign students to schools based on score, preferences, and available slots
+    res.json({
+      message: "AI-based distribution logic will be implemented here",
     });
-    res.json(courseStudents);
-  });
-
-  app.get("/university-departments/:universityId", (req, res) => {
-    const universityId = req.params.universityId;
-    const universityDepartments = departments
-      .values()
-      .filter((dept) => dept.universityId === universityId);
-    res.json(universityDepartments);
   });
 
   app.use(express.static("/dist"));

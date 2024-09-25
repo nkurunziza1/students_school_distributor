@@ -1,7 +1,10 @@
 import { AuthClient } from "@dfinity/auth-client";
 
-
 const IDENTITY_PROVIDER = `http://localhost:8000/?canisterId=${
+  import.meta.env.VITE_IDENTITY_CANISTER_ID
+}`;
+
+const DEPLOYED_PROVIDER = `https://identity.ic0.app/#authorize?canisterId=${
   import.meta.env.VITE_IDENTITY_CANISTER_ID
 }`;
 
@@ -34,7 +37,7 @@ export async function login() {
   const isAuthenticated = await authClient.isAuthenticated();
   if (!isAuthenticated) {
     await authClient?.login({
-      identityProvider: IDENTITY_PROVIDER,
+      identityProvider: DEPLOYED_PROVIDER,
       onSuccess: async () => {
         window.location.reload();
       },

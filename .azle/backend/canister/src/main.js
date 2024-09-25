@@ -74,7 +74,7 @@ var __privateMethod = (obj, member, method2) => {
   return method2;
 };
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/buffer.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/buffer.js
 var buffer_exports = {};
 __export(buffer_exports, {
   Buffer: () => Buffer2,
@@ -2023,7 +2023,7 @@ function dew() {
 }
 var exports$3, _dewExec$2, exports$2, _dewExec$1, exports$1, _dewExec, exports, Buffer2, SlowBuffer, INSPECT_MAX_BYTES, kMaxLength, FastBuffer;
 var init_buffer = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/buffer.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/buffer.js"() {
     exports$3 = {};
     _dewExec$2 = false;
     exports$2 = {};
@@ -2051,7 +2051,7 @@ var init_buffer = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/process.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/process.js
 var process_exports = {};
 __export(process_exports, {
   _debugEnd: () => _debugEnd,
@@ -2176,7 +2176,7 @@ function listeners(name) {
 }
 var title, arch, platform, env2, argv, execArgv, version, versions, emitWarning, binding, umask, cwd, chdir, release, _rawDebug, moduleLoadList, domain, _exiting, config, reallyExit, _kill, cpuUsage, resourceUsage, memoryUsage, kill, exit, openStdin, allowedNodeEnvironmentFlags, features, _fatalExceptions, setUncaughtExceptionCaptureCallback, _tickCallback, _debugProcess, _debugEnd, _startProfilerIdleNotifier, _stopProfilerIdleNotifier, stdout, stderr, stdin, abort, pid, ppid, execPath, debugPort, argv0, _preload_modules, setSourceMapsEnabled, _performance, nowOffset, nanoPerSec, _maxListeners, _events, _eventsCount, addListener, once, off, removeListener, removeAllListeners, emit, prependListener, prependOnceListener, process2, nextTick2;
 var init_process = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/process.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/process.js"() {
     title = "wasmedge_quickjs";
     arch = "wasm";
     platform = "wasi";
@@ -2358,7 +2358,7 @@ var init_process = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/punycode.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/punycode.js
 var punycode_exports = {};
 __export(punycode_exports, {
   decode: () => decode4,
@@ -2414,7 +2414,7 @@ function ucs2decode(string) {
 }
 var maxInt, base, tMin, tMax, skew, damp, initialBias, initialN, delimiter, regexPunycode, regexNonASCII, regexSeparators, errors, baseMinusTMin, floor, stringFromCharCode, ucs2encode, basicToDigit, digitToBasic, adapt, decode4, encode4, toUnicode, toASCII, punycode, punycode_default;
 var init_punycode = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/punycode.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/punycode.js"() {
     "use strict";
     maxInt = 2147483647;
     base = 36;
@@ -2605,7 +2605,7 @@ var init_punycode = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/querystring.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/querystring.js
 var querystring_exports = {};
 __export(querystring_exports, {
   decode: () => decode5,
@@ -2619,7 +2619,7 @@ function e(e3, n3) {
 }
 var n, r, t, o, decode5, encode5, parse, stringify;
 var init_querystring = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/querystring.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/querystring.js"() {
     n = function(n3, r3, t2, o3) {
       r3 = r3 || "&", t2 = t2 || "=";
       var a2 = {};
@@ -2675,7 +2675,7 @@ var init_querystring = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/util/types.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/util/types.js
 var types_exports = {};
 __export(types_exports, {
   isAnyArrayBuffer: () => isAnyArrayBuffer,
@@ -2834,14 +2834,14 @@ function isUint32Array(value) {
 }
 var _toString, _isObjectLike, _isFunctionLike;
 var init_types = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/util/types.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/util/types.js"() {
     _toString = Object.prototype.toString;
     _isObjectLike = (value) => value !== null && typeof value === "object";
     _isFunctionLike = (value) => value !== null && typeof value === "function";
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/validators.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/validators.js
 function validatePort(port, name = "Port", allowZero = true) {
   if (typeof port !== "number" && typeof port !== "string" || typeof port === "string" && port.trim().length === 0 || +port !== +port >>> 0 || port > 65535 || port === 0 && !allowZero) {
     throw new ERR_SOCKET_BAD_PORT(name, port, allowZero);
@@ -2866,7 +2866,7 @@ function isUint32(value) {
 }
 var validateFunction, validateAbortSignal2, validateObject, validateCallback, validateInt32, validateUint32, validateInteger, getValidMode, validateArray, validateOneOf;
 var init_validators = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/validators.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/validators.js"() {
     init_errors();
     validateFunction = hideStackFrames(
       (value, name) => {
@@ -2993,7 +2993,7 @@ var init_validators = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal_binding/util.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal_binding/util.js
 function isArrayIndex(value) {
   switch (typeof value) {
     case "number":
@@ -3059,7 +3059,7 @@ function getOwnNonIndexProperties(obj, filter) {
 }
 var ALL_PROPERTIES, ONLY_WRITABLE, ONLY_ENUMERABLE, ONLY_CONFIGURABLE, SKIP_STRINGS, SKIP_SYMBOLS, isNumericLookup;
 var init_util = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal_binding/util.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal_binding/util.js"() {
     ALL_PROPERTIES = 0;
     ONLY_WRITABLE = 1;
     ONLY_ENUMERABLE = 2;
@@ -3070,7 +3070,7 @@ var init_util = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/util/inspect.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/util/inspect.js
 function getUserOptions(ctx, isCrossContext) {
   const ret = {
     stylize: ctx.stylize,
@@ -4296,7 +4296,7 @@ function stripVTControlCharacters(str) {
 }
 var kObjectType, kArrayType, kArrayExtrasType, kMinLineLength, kWeak, kIterator, kMapEntries, kPending, kRejected, meta, isUndetectableObject, strEscapeSequencesRegExp, strEscapeSequencesReplacer, strEscapeSequencesRegExpSingle, strEscapeSequencesReplacerSingle, keyStrRegExp, numberRegExp, nodeModulesRegExp, classRegExp, stripCommentsRegExp, inspectDefaultOptions, customInspectSymbol, defaultFG, defaultBG, escapeFn, builtInObjects, hexSlice, colorRegExp, ansiPattern, ansi, isFullWidthCodePoint, isZeroWidthCodePoint;
 var init_inspect = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/util/inspect.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/util/inspect.js"() {
     init_types();
     init_validators();
     init_errors();
@@ -4645,7 +4645,7 @@ var init_inspect = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/errors.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/errors.js
 var errors_exports = {};
 __export(errors_exports, {
   AbortError: () => AbortError2,
@@ -4871,7 +4871,7 @@ function isErrorStackTraceLimitWritable() {
 }
 var ERR_HTTP_HEADERS_SENT, ERR_HTTP_INVALID_HEADER_VALUE, ERR_HTTP_TRAILER_INVALID, ERR_INVALID_HTTP_TOKEN, classRegExp2, kTypes, ERR_OUT_OF_RANGE, ERR_INVALID_ARG_TYPE_RANGE, ERR_INVALID_ARG_TYPE, ERR_INVALID_ARG_VALUE_RANGE, ERR_INVALID_ARG_VALUE, ERR_INVALID_CHAR, ERR_METHOD_NOT_IMPLEMENTED, ERR_STREAM_CANNOT_PIPE, ERR_STREAM_ALREADY_FINISHED, ERR_STREAM_WRITE_AFTER_END, ERR_STREAM_NULL_VALUES, ERR_STREAM_DESTROYED, ERR_SOCKET_BAD_PORT, ERR_STREAM_PREMATURE_CLOSE, AbortError2, ERR_INVALID_CALLBACK, ERR_MISSING_ARGS, ERR_MISSING_OPTION, ERR_MULTIPLE_CALLBACK, ERR_STREAM_PUSH_AFTER_EOF, ERR_STREAM_UNSHIFT_AFTER_END_EVENT, ERR_UNKNOWN_ENCODING, ERR_INVALID_RETURN_VALUE, ERR_INCOMPATIBLE_OPTION_PAIR, captureStackTrace, captureLargerStackTrace, NodeErrorAbstraction, kIsNodeError, NodeSystemError, ERR_FS_EISDIR, ERR_FS_CP_DIR_TO_NON_DIR, ERR_FS_CP_EEXIST, ERR_FS_CP_EINVAL, ERR_FS_CP_FIFO_PIPE, ERR_FS_CP_NON_DIR_TO_DIR, ERR_FS_CP_SOCKET, ERR_FS_CP_SYMLINK_TO_SUBDIRECTORY, ERR_FS_CP_UNKNOWN, uvUnmappedError, uvException, ERR_UNAVAILABLE_DURING_EXIT, ERR_ASSERT_SNAPSHOT_NOT_SUPPORTED, ERR_AMBIGUOUS_ARGUMENT, ERR_DIR_CLOSED, ERR_DIR_CONCURRENT_OPERATION, ERR_FS_FILE_TOO_LARGE, AggregateError2, ERR_FS_INVALID_SYMLINK_TYPE, ERR_CRYPTO_FIPS_FORCED, ERR_CRYPTO_TIMING_SAFE_EQUAL_LENGTH, ERR_OPERATION_FAILED, ERR_CRYPTO_ENGINE_UNKNOWN, ERR_CRYPTO_INVALID_DIGEST, ERR_CRYPTO_SCRYPT_INVALID_PARAMETER, ERR_CRYPTO_SCRYPT_NOT_SUPPORTED, ERR_CRYPTO_INCOMPATIBLE_KEY_OPTIONS, ERR_CRYPTO_INVALID_KEY_OBJECT_TYPE, ERR_CRYPTO_INVALID_JWK, ERR_ILLEGAL_CONSTRUCTOR, ERR_CRYPTO_INVALID_KEYLEN, ERR_CRYPTO_HASH_FINALIZED, ERR_CRYPTO_HASH_UPDATE_FAILED, ERR_CRYPTO_INVALID_STATE, ERR_CRYPTO_UNKNOWN_CIPHER;
 var init_errors = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/errors.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/errors.js"() {
     init_inspect();
     ERR_HTTP_HEADERS_SENT = class extends Error {
       constructor(x) {
@@ -5484,13 +5484,13 @@ var init_errors = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/normalize_encoding.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/normalize_encoding.js
 var init_normalize_encoding = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/normalize_encoding.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/normalize_encoding.js"() {
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/util.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/util.js
 function once2(callback) {
   let called = false;
   return function(...args2) {
@@ -5587,7 +5587,7 @@ function promisify(original) {
 }
 var customInspectSymbol2, kEnumerableProperty, codesWarned, kCustomPromisifiedSymbol, kCustomPromisifyArgsSymbol, customPromisifyArgs, kEmptyObject2;
 var init_util2 = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/util.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/util.js"() {
     init_validators();
     init_normalize_encoding();
     customInspectSymbol2 = Symbol.for("nodejs.util.inspect.custom");
@@ -5604,7 +5604,7 @@ var init_util2 = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/url.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/url.js
 function toPathIfFileURL(fileURLOrPath) {
   if (!(fileURLOrPath instanceof _URL)) {
     return fileURLOrPath;
@@ -5613,7 +5613,7 @@ function toPathIfFileURL(fileURLOrPath) {
 }
 var searchParams;
 var init_url = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/url.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/url.js"() {
     init_url2();
     init_buffer();
     init_url2();
@@ -5621,21 +5621,21 @@ var init_url = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/assert.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/assert.js
 function assert3(expr, msg = "") {
   if (!expr) {
     throw new Error(msg);
   }
 }
 var init_assert = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/assert.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/assert.js"() {
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal_binding/constants.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal_binding/constants.js
 var os, fs;
 var init_constants = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal_binding/constants.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal_binding/constants.js"() {
     os = {
       UV_UDP_IPV6ONLY: 1,
       UV_UDP_PARTIAL: 2,
@@ -5838,10 +5838,10 @@ var init_constants = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/fs/promises.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/fs/promises.js
 var access2, appendFile2, chmod2, chown2, copyFile2, cp2, lchmod2, lchown2, lutimes2, link2, lstat2, mkdir2, mkdtemp2, open2, opendir2, readdir2, readFile, readlink2, realpath2, rename2, rmdir2, rm2, stat2, symlink2, truncate, unlink2, utimes2, watch2, writeFile, constants, promises, promises_default;
 var init_promises = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/fs/promises.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/fs/promises.js"() {
     init_fs2();
     init_util2();
     access2 = promisify(access);
@@ -5938,7 +5938,7 @@ var init_promises = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs/cp/cp.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs/cp/cp.js
 async function cpFn(src, dest, opts) {
   if (opts.preserveTimestamps && process2.arch === "ia32") {
     const warning = "Using the preserveTimestamps option in 32-bit node is not recommended";
@@ -6222,7 +6222,7 @@ async function copyLink(resolvedSrc, dest) {
 }
 var ERR_FS_CP_DIR_TO_NON_DIR2, ERR_FS_CP_EEXIST2, ERR_FS_CP_EINVAL2, ERR_FS_CP_FIFO_PIPE2, ERR_FS_CP_NON_DIR_TO_DIR2, ERR_FS_CP_SOCKET2, ERR_FS_CP_SYMLINK_TO_SUBDIRECTORY2, ERR_FS_CP_UNKNOWN2, ERR_FS_EISDIR2, EEXIST, EISDIR, EINVAL, ENOTDIR, normalizePathToArray;
 var init_cp = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs/cp/cp.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs/cp/cp.js"() {
     "use strict";
     init_errors();
     init_constants();
@@ -6252,17 +6252,17 @@ var init_cp = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/util/types.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/util/types.js
 var types_default;
 var init_types2 = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/util/types.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/util/types.js"() {
     init_types();
     init_types();
     types_default = { ...types_exports };
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs/cp/cp-sync.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs/cp/cp-sync.js
 function cpSyncFn(src, dest, opts) {
   if (opts.preserveTimestamps && process2.arch === "ia32") {
     const warning = "Using the preserveTimestamps option in 32-bit node is not recommended";
@@ -6526,7 +6526,7 @@ function copyLink2(resolvedSrc, dest) {
 }
 var EEXIST2, EISDIR2, EINVAL2, ENOTDIR2, ERR_FS_CP_DIR_TO_NON_DIR3, ERR_FS_CP_EEXIST3, ERR_FS_CP_EINVAL3, ERR_FS_CP_FIFO_PIPE3, ERR_FS_CP_NON_DIR_TO_DIR3, ERR_FS_CP_SOCKET3, ERR_FS_CP_SYMLINK_TO_SUBDIRECTORY3, ERR_FS_CP_UNKNOWN3, ERR_FS_EISDIR3, ERR_INVALID_RETURN_VALUE2, cp_sync_default;
 var init_cp_sync = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs/cp/cp-sync.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs/cp/cp-sync.js"() {
     "use strict";
     init_cp();
     init_errors();
@@ -6559,7 +6559,7 @@ var init_cp_sync = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/end-of-stream.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/end-of-stream.js
 function isRequest(stream) {
   return stream.setHeader && typeof stream.abort === "function";
 }
@@ -6712,7 +6712,7 @@ function eos(stream, options, callback) {
 }
 var nop, end_of_stream_default;
 var init_end_of_stream = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/end-of-stream.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/end-of-stream.js"() {
     init_errors();
     init_util2();
     init_validators();
@@ -6722,7 +6722,7 @@ var init_end_of_stream = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/add-abort-signal.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/add-abort-signal.js
 function isStream(obj) {
   return !!(obj && typeof obj.pipe === "function");
 }
@@ -6750,7 +6750,7 @@ function addAbortSignalNoValidate(signal, stream) {
 }
 var validateAbortSignal3;
 var init_add_abort_signal = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/add-abort-signal.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/add-abort-signal.js"() {
     init_errors();
     init_end_of_stream();
     validateAbortSignal3 = (signal, name) => {
@@ -6761,7 +6761,7 @@ var init_add_abort_signal = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/destroy.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/destroy.js
 function checkError(err2, w, r3) {
   if (err2) {
     err2.stack;
@@ -7009,7 +7009,7 @@ function destroyer(stream, err2) {
 }
 var kDestroy, kConstruct, destroy_default;
 var init_destroy = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/destroy.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/destroy.js"() {
     init_errors();
     kDestroy = Symbol("kDestroy");
     kConstruct = Symbol("kConstruct");
@@ -7023,7 +7023,7 @@ var init_destroy = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/utils.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/utils.js
 function isReadableNodeStream(obj) {
   return !!(obj && typeof obj.pipe === "function" && typeof obj.on === "function" && (!obj._writableState || obj._readableState?.readable !== false) && // Duplex
   (!obj._writableState || obj._readableState));
@@ -7097,12 +7097,12 @@ function isWritable2(stream) {
 }
 var kIsDisturbed;
 var init_utils = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/utils.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/utils.js"() {
     kIsDisturbed = Symbol("kIsDisturbed");
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/from.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/from.js
 function _from(Readable2, iterable, opts) {
   let iterator;
   if (typeof iterable === "string" || iterable instanceof Buffer2) {
@@ -7187,21 +7187,21 @@ function _from(Readable2, iterable, opts) {
 }
 var from_default;
 var init_from = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/from.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/from.js"() {
     init_buffer();
     init_errors();
     from_default = _from;
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/fmt/printf.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/fmt/printf.js
 function sprintf(format3, ...args2) {
   const printf = new Printf(format3, ...args2);
   return printf.doPrintf();
 }
 var State, WorP, Flags, min, UNICODE_REPLACEMENT_CHARACTER, DEFAULT_PRECISION, FLOAT_REGEXP, F, Printf;
 var init_printf = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/fmt/printf.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/fmt/printf.js"() {
     State = {
       PASSTHROUGH: 1,
       PERCENT: 2,
@@ -7839,7 +7839,7 @@ var init_printf = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/util/debuglog.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/util/debuglog.js
 function initializeDebugEnv(debugEnv2) {
   debugImpls = /* @__PURE__ */ Object.create(null);
   if (debugEnv2) {
@@ -7902,7 +7902,7 @@ function debuglog(set, cb) {
 }
 var debugImpls, testEnabled, noop2, debugEnv;
 var init_debuglog = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/util/debuglog.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/util/debuglog.js"() {
     init_printf();
     noop2 = () => {
     };
@@ -7911,7 +7911,7 @@ var init_debuglog = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/state.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/state.js
 function highWaterMarkFrom(options, isDuplex, duplexKey) {
   return options.highWaterMark != null ? options.highWaterMark : isDuplex ? options[duplexKey] : null;
 }
@@ -7930,12 +7930,12 @@ function getHighWaterMark(state, options, duplexKey, isDuplex) {
   return getDefaultHighWaterMark(state.objectMode);
 }
 var init_state = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/state.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/state.js"() {
     init_errors();
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/events.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/events.js
 var events_exports = {};
 __export(events_exports, {
   EventEmitter: () => EventEmitter,
@@ -8140,7 +8140,7 @@ async function once4(emitter, name, options = kEmptyObject) {
 }
 var domain2, kRejection, captureRejectionSymbol, events_default;
 var init_events = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/events.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/events.js"() {
     "use strict";
     kRejection = Symbol.for("nodejs.rejection");
     EventHandlers.prototype = /* @__PURE__ */ Object.create(null);
@@ -8366,7 +8366,7 @@ var init_events = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/legacy.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/legacy.js
 function Stream(opts) {
   events_default.call(this, opts);
 }
@@ -8383,7 +8383,7 @@ function prependListener3(emitter, event, fn) {
   }
 }
 var init_legacy = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/legacy.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/legacy.js"() {
     init_events();
     Object.setPrototypeOf(Stream.prototype, events_default.prototype);
     Object.setPrototypeOf(Stream, events_default);
@@ -8447,7 +8447,7 @@ var init_legacy = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/string_decoder.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/string_decoder.js
 var string_decoder_exports = {};
 __export(string_decoder_exports, {
   StringDecoder: () => StringDecoder
@@ -8494,7 +8494,7 @@ function base64DetectIncompleteChar(buffer) {
 }
 var isBufferEncoding;
 var init_string_decoder = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/string_decoder.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/string_decoder.js"() {
     init_buffer();
     isBufferEncoding = Buffer2.isEncoding || function(encoding2) {
       switch (encoding2 && encoding2.toLowerCase()) {
@@ -8590,10 +8590,10 @@ var init_string_decoder = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/buffer_list.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/buffer_list.js
 var BufferList, buffer_list_default;
 var init_buffer_list = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/buffer_list.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/buffer_list.js"() {
     init_buffer();
     BufferList = class {
       constructor() {
@@ -8753,7 +8753,7 @@ var init_buffer_list = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/readable.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/readable.js
 function ReadableState(options, stream, isDuplex) {
   if (typeof isDuplex !== "boolean") {
     isDuplex = stream instanceof Stream.Duplex;
@@ -9189,7 +9189,7 @@ function wrap(src, options) {
 }
 var debug, kPaused, nop2, errorOrDestroy2, MAX_HWM, readable_default;
 var init_readable = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/readable.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/readable.js"() {
     init_add_abort_signal();
     init_buffer();
     init_debuglog();
@@ -9693,7 +9693,7 @@ var init_readable = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/writable.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/writable.js
 function _uint8ArrayToBuffer(chunk) {
   return Buffer2.from(
     chunk.buffer,
@@ -10099,7 +10099,7 @@ function finish(stream, state) {
 }
 var errorOrDestroy3, kOnFinished, destroy2, writable_default;
 var init_writable = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/writable.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/writable.js"() {
     init_add_abort_signal();
     init_buffer();
     init_state();
@@ -10293,7 +10293,7 @@ var init_writable = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/duplex.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/duplex.js
 function Duplex(options) {
   if (!(this instanceof Duplex)) {
     return new Duplex(options);
@@ -10579,7 +10579,7 @@ function duplexFrom(body2) {
 }
 var Duplexify, duplex_default;
 var init_duplex = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/duplex.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/duplex.js"() {
     init_util2();
     init_destroy();
     init_errors();
@@ -10669,7 +10669,7 @@ var init_duplex = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/transform.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/transform.js
 function Transform(options) {
   if (!(this instanceof Transform)) {
     return new Transform(options);
@@ -10753,7 +10753,7 @@ function prefinish2() {
 }
 var kCallback, transform_default;
 var init_transform = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/transform.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/transform.js"() {
     init_errors();
     init_duplex();
     kCallback = Symbol("kCallback");
@@ -10825,7 +10825,7 @@ var init_transform = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/passthrough.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/passthrough.js
 function PassThrough(options) {
   if (!(this instanceof PassThrough)) {
     return new PassThrough(options);
@@ -10834,7 +10834,7 @@ function PassThrough(options) {
 }
 var passthrough_default;
 var init_passthrough = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/passthrough.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/passthrough.js"() {
     init_transform();
     Object.setPrototypeOf(PassThrough.prototype, transform_default.prototype);
     Object.setPrototypeOf(PassThrough, transform_default);
@@ -10845,7 +10845,7 @@ var init_passthrough = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/pipeline.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/pipeline.js
 function destroyer2(stream, reading, writing, callback) {
   callback = once2(callback);
   let finished2 = false;
@@ -11057,7 +11057,7 @@ function pipelineImpl(streams, callback, opts) {
   return ret;
 }
 var init_pipeline = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/pipeline.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/pipeline.js"() {
     init_utils();
     init_util2();
     init_validators();
@@ -11070,7 +11070,7 @@ var init_pipeline = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/compose.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/compose.js
 function compose(...streams) {
   if (streams.length === 0) {
     throw new ERR_MISSING_ARGS("streams");
@@ -11201,7 +11201,7 @@ function compose(...streams) {
 }
 var ComposeDuplex, compose_default;
 var init_compose = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/compose.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/streams/compose.js"() {
     init_destroy();
     init_utils();
     init_pipeline();
@@ -11227,7 +11227,7 @@ var init_compose = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/stream/promises.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/stream/promises.js
 function pipeline2(...streams) {
   return new Promise((resolve3, reject2) => {
     let signal;
@@ -11260,7 +11260,7 @@ function finished(stream, opts) {
 }
 var promises_default2;
 var init_promises2 = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/stream/promises.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/stream/promises.js"() {
     init_utils();
     init_pipeline();
     init_end_of_stream();
@@ -11271,7 +11271,7 @@ var init_promises2 = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/stream.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/stream.js
 var stream_exports = {};
 __export(stream_exports, {
   Duplex: () => duplex_default,
@@ -11299,7 +11299,7 @@ function _uint8ArrayToBuffer2(chunk) {
 }
 var customPromisify, stream_default;
 var init_stream = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/stream.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/stream.js"() {
     init_add_abort_signal();
     init_destroy();
     init_utils();
@@ -11354,7 +11354,7 @@ var init_stream = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/fs.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/fs.js
 var fs_exports2 = {};
 __export(fs_exports2, {
   Dir: () => Dir,
@@ -11459,7 +11459,7 @@ __export(fs_exports2, {
 });
 var fs_default, F_OK2, R_OK, W_OK, X_OK;
 var init_fs = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/fs.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/fs.js"() {
     init_promises();
     init_fs2();
     fs_default = {
@@ -11569,7 +11569,7 @@ var init_fs = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs/stream.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs/stream.js
 function closeStream(stream, err2, cb) {
   if (!stream.fd) {
     cb(err2);
@@ -11591,7 +11591,7 @@ function createReadStream(path2, options) {
 }
 var kIsPerformingIO, kFs, _a, _b, WriteStreamClass, ReadStream;
 var init_stream2 = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs/stream.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs/stream.js"() {
     init_stream();
     init_utils2();
     init_url2();
@@ -11789,10 +11789,10 @@ var init_stream2 = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal_binding/uv.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal_binding/uv.js
 var UV_EOF, UV_UNKNOWN, UV_EAI_ADDRFAMILY, UV_EAI_AGAIN, UV_EAI_BADFLAGS, UV_EAI_CANCELED, UV_EAI_FAIL, UV_EAI_FAMILY, UV_EAI_MEMORY, UV_EAI_NODATA, UV_EAI_NONAME, UV_EAI_OVERFLOW, UV_EAI_SERVICE, UV_EAI_SOCKTYPE, UV_EAI_BADHINTS, UV_EAI_PROTOCOL, UV_E2BIG, UV_EACCES, UV_EADDRINUSE, UV_EADDRNOTAVAIL, UV_EAFNOSUPPORT, UV_EAGAIN, UV_EALREADY, UV_EBADF, UV_EBUSY, UV_ECANCELED, UV_ECHARSET, UV_ECONNABORTED, UV_ECONNREFUSED, UV_ECONNRESET, UV_EDESTADDRREQ, UV_EEXIST, UV_EFAULT, UV_EHOSTUNREACH, UV_EINTR, UV_EINVAL, UV_EIO, UV_EISCONN, UV_EISDIR, UV_ELOOP, UV_EMFILE, UV_EMSGSIZE, UV_ENAMETOOLONG, UV_ENETDOWN, UV_ENETUNREACH, UV_ENFILE, UV_ENOBUFS, UV_ENODEV, UV_ENOENT, UV_ENOMEM, UV_ENONET, UV_ENOSPC, UV_ENOSYS, UV_ENOTCONN, UV_ENOTDIR, UV_ENOTEMPTY, UV_ENOTSOCK, UV_ENOTSUP, UV_EPERM, UV_EPIPE, UV_EPROTO, UV_EPROTONOSUPPORT, UV_EPROTOTYPE, UV_EROFS, UV_ESHUTDOWN, UV_ESPIPE, UV_ESRCH, UV_ETIMEDOUT, UV_ETXTBSY, UV_EXDEV, UV_EFBIG, UV_ENOPROTOOPT, UV_ERANGE, UV_ENXIO, UV_EMLINK, UV_EHOSTDOWN, UV_EREMOTEIO, UV_ENOTTY, UV_EFTYPE, UV_EILSEQ, UV_EOVERFLOW, UV_ESOCKTNOSUPPORT, uv_default;
 var init_uv = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal_binding/uv.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal_binding/uv.js"() {
     UV_EOF = -4095;
     UV_UNKNOWN = -4094;
     UV_EAI_ADDRFAMILY = -3e3;
@@ -11962,7 +11962,7 @@ var init_uv = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs.js
 import * as binding2 from "_node:fs";
 function makeCallback(cb) {
   validateFunction(cb, "cb");
@@ -13755,7 +13755,7 @@ function cp(src, dest, options, callback) {
 }
 var _origin, Stats2, _origin2, BigIntStats, codeToErrorMsg, codeToUvErrno, FILETYPE_BLOCK_DEVICE, FILETYPE_CHARACTER_DEVICE, FILETYPE_DIRECTORY, FILETYPE_REGULAR_FILE, FILETYPE_SOCKET_DGRAM, FILETYPE_SOCKET_STREAM, FILETYPE_SYMBOLIC_LINK, Dirent, _fd, _dataBuf, _idx, _fin, _cookie, _closed, _fetch, fetch_fn, _inReading, Dir, validateObject2, defaultCpOptions, validateCpOptions, _fd2, _path, FileHandle;
 var init_fs2 = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs.js"() {
     init_validators();
     init_utils2();
     init_errors();
@@ -14390,7 +14390,7 @@ var init_fs2 = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs/utils.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs/utils.js
 function StatsBase(dev, mode, nlink, uid, gid, rdev, blksize, ino, size, blocks) {
   this.dev = dev;
   this.mode = mode;
@@ -14505,7 +14505,7 @@ function stringToFlags(flags, name = "flags") {
 }
 var kType, kStats, isWindows, F_OK3, W_OK2, R_OK2, X_OK2, COPYFILE_EXCL, COPYFILE_FICLONE, COPYFILE_FICLONE_FORCE, O_APPEND, O_CREAT, O_EXCL, O_RDONLY, O_RDWR, O_SYNC, O_TRUNC, O_WRONLY, S_IFBLK, S_IFCHR, S_IFDIR, S_IFIFO, S_IFLNK, S_IFMT, S_IFREG, S_IFSOCK, UV_FS_SYMLINK_DIR, UV_FS_SYMLINK_JUNCTION, UV_DIRENT_UNKNOWN, UV_DIRENT_FILE, UV_DIRENT_DIR, UV_DIRENT_LINK, UV_DIRENT_FIFO, UV_DIRENT_SOCKET, UV_DIRENT_CHAR, UV_DIRENT_BLOCK, EISDIR3, kMinimumAccessMode2, kMaximumAccessMode2, kDefaultCopyMode2, kMinimumCopyMode2, kMaximumCopyMode2, kIoMaxLength, kReadFileUnknownBufferLength, kReadFileBufferLength, kWriteFileMaxChunkSize, kMaxUserId, Dirent2, DirentFromStats, bufferSep, nullCheck, kNsPerMsBigInt, kNsPerSecBigInt, kMsPerSec, kNsPerMs, stringToSymlinkType, validateOffsetLengthRead, validateOffsetLengthWrite, validatePath, getValidatedPath, getValidatedFd, validateBufferArray, defaultCpOptions2, defaultRmOptions, defaultRmdirOptions, validateCpOptions2, validateRmOptions, validateRmOptionsSync, validateRmdirOptions, getValidMode2, validateStringAfterArrayBufferView, validatePosition, realpathCacheKey, showStringCoercionDeprecation, validateEncoding;
 var init_utils2 = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs/utils.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/internal/fs/utils.js"() {
     "use strict";
     init_buffer();
     init_errors();
@@ -14947,7 +14947,7 @@ var init_utils2 = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/path.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/path.js
 var path_exports = {};
 __export(path_exports, {
   _makeLong: () => _makeLong,
@@ -15440,7 +15440,7 @@ function dew2() {
 }
 var exports$12, _dewExec2, exports2, _makeLong, basename, delimiter2, dirname, extname, format, isAbsolute, join2, normalize, parse2, posix, relative, resolve, sep, win32, toNamespacedPath;
 var init_path = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/path.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/path.js"() {
     init_process();
     init_errors();
     init_utils2();
@@ -15466,7 +15466,7 @@ var init_path = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/encoding.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/encoding.js
 import { text_encode, text_decode, text_encode_into } from "_encoding";
 function isError(e3) {
   return isObject(e3) && (objectToString(e3) === "[object Error]" || e3 instanceof Error);
@@ -15479,7 +15479,7 @@ function isUndefined(arg) {
 }
 var TextEncoder2, _encoding, _fatal, _ignoreBOM, TextDecoder2;
 var init_encoding = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/encoding.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/encoding.js"() {
     TextEncoder2 = class {
       get encoding() {
         return "utf-8";
@@ -15583,7 +15583,7 @@ var init_encoding = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/util.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/util.js
 var util_exports = {};
 __export(util_exports, {
   TextDecoder: () => TextDecoder3,
@@ -15736,7 +15736,7 @@ function log(...args2) {
 }
 var debuglog2, promisify2, deprecate2, NodeFalsyValueRejectionError, NodeInvalidArgTypeError, TextDecoder3, TextEncoder3, months, util_default;
 var init_util3 = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/util.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/util.js"() {
     init_util2();
     init_debuglog();
     init_types2();
@@ -15806,7 +15806,7 @@ var init_util3 = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/whatwg_url.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/whatwg_url.js
 function isASCIIDigit(c2) {
   return c2 >= 48 && c2 <= 57;
 }
@@ -15988,7 +15988,7 @@ function replaceByteInByteSequence(buf, from, to) {
 }
 var urlStateMachine, infra, ref$3, TextEncoder4, TextDecoder4, utf8Encoder, utf8Decoder, encoding, ref$2, isASCIIHex, ref$1$1, utf8Encode$1, extraFragmentPercentEncodeSet, extraQueryPercentEncodeSet, extraPathPercentEncodeSet, extraUserinfoPercentEncodeSet, extraComponentPercentEncodeSet, extraURLEncodedPercentEncodeSet, percentEncoding, ref, utf8Encode, utf8DecodeWithoutBOM, ref$1, percentDecodeBytes, utf8PercentEncodeString, isURLEncodedPercentEncode, urlencoded$2, urlencoded$1, URLSearchParams$1, usm, urlencoded, URLSearchParams, URL;
 var init_whatwg_url = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/whatwg_url.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/whatwg_url.js"() {
     init_punycode();
     init_util3();
     urlStateMachine = { exports: {} };
@@ -17339,7 +17339,7 @@ var init_whatwg_url = __esm({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/url.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/url.js
 var url_exports = {};
 __export(url_exports, {
   URL: () => _URL,
@@ -18009,7 +18009,7 @@ function pathToFileURL(filepath) {
 }
 var h, e2, a, o2, n2, i, l, p2, c, u, f, m, v, g, y, b, exports3, _dewExec3, path, processPlatform$1, CHAR_FORWARD_SLASH$1, CHAR_LOWERCASE_A$1, CHAR_LOWERCASE_Z$1, isWindows$1, forwardSlashRegEx$1, percentRegEx$1, backslashRegEx$1, newlineRegEx$1, carriageReturnRegEx$1, tabRegEx$1, processPlatform, Url, format2, resolve2, resolveObject, parse3, _URL, CHAR_FORWARD_SLASH, CHAR_LOWERCASE_A, CHAR_LOWERCASE_Z, isWindows2, forwardSlashRegEx, percentRegEx, backslashRegEx, newlineRegEx, carriageReturnRegEx, tabRegEx;
 var init_url2 = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/url.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/url.js"() {
     init_punycode();
     init_querystring();
     init_process();
@@ -20078,7 +20078,7 @@ var require_text_encoding = __commonJS({
   }
 });
 
-// ../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/http.js
+// ../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/http.js
 var http_exports = {};
 __export(http_exports, {
   HttpConn: () => HttpConn,
@@ -20220,7 +20220,7 @@ function get(...args2) {
 }
 var URL3, Request, _chunked, _chunkBuff, _bodyUsed, _readChunk, readChunk_fn, _readBody, readBody_fn, Response, STATUS_CODES, METHODS, ClientRequest, IncomingMessageForClient, _headers, _conn, _firstChunk, __end, _ensureHeaders, ensureHeaders_fn, ServerResponse, _req, IncomingMessageForServer, _chunk, _connection, _version, _chunkBuffer, _respHeaders, HttpConn, _httpConnections, _listener, _listening, _listenLoop, listenLoop_fn, ServerImpl, http_default;
 var init_http = __esm({
-  "../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/http.js"() {
+  "../../../../../../../.config/azle/wasmedge_quickjs_df63c5d08af24c281b420214a3ad1686e0c3fd526c28acc5fbdc690c9765ebd7/modules/http.js"() {
     init_util3();
     init_buffer();
     init_events();
@@ -84307,146 +84307,94 @@ var Principal4 = class _Principal {
 // src/backend/index.ts
 var import_express = __toESM(require_express2(), 1);
 var import_cors = __toESM(require_lib3(), 1);
-var universities = StableBTreeMap(0);
-var students = StableBTreeMap(1);
-var teachers = StableBTreeMap(2);
-var hods = StableBTreeMap(3);
-var programs = StableBTreeMap(4);
-var departments = StableBTreeMap(5);
+var schoolStorage = StableBTreeMap(0);
+var studentStorage = StableBTreeMap(1);
+var GeneratedDistributed = StableBTreeMap(6);
 var backend_default = Server2(() => {
   const app = (0, import_express.default)();
   app.use((0, import_cors.default)());
   app.use(import_express.default.json());
-  app.post("/universities", (req, res) => {
-    const { name, location, programs: programs2 } = req.body;
-    const university = {
-      id: v4_default(),
+  app.post("/schools", (req, res) => {
+    const {
       name,
-      location,
-      programs: programs2,
-      owner: ic.caller().toText()
-    };
-    universities.insert(university.id, university);
-    res.json(university);
-  });
-  app.get("/universities", (req, res) => {
+      level,
+      combinations,
+      capacity,
+      status = "excellent" /* EXCELLENT */
+    } = req.body;
+    if (!ic.caller().toText()) {
+      return res.status(401).json({ message: "Unauthorized" });
+    }
+    if (level === "A-Level" && !combinations) {
+      return res.status(400).json({ message: "Advanced level schools require combinations" });
+    }
     try {
-      const universitiesList = universities.values();
-      res.json(universitiesList);
+      let availableSlots;
+      if (level === "A-Level") {
+        availableSlots = {};
+        combinations.forEach((combination) => {
+          availableSlots[combination] = {
+            totalSlots: Math.floor(capacity / combinations.length),
+            remainingSlots: Math.floor(capacity / combinations.length)
+          };
+        });
+      } else {
+        availableSlots = capacity;
+      }
+      const school = {
+        id: v4_default(),
+        name,
+        status,
+        level,
+        combinations: level === "A-Level" ? combinations : null,
+        owner: ic.caller().toText(),
+        capacity,
+        availableSlots,
+        otherSchoolDetails: []
+      };
+      schoolStorage.insert(school.id, school);
+      res.json(school);
     } catch (error2) {
-      console.error("Error fetching universities:", error2);
-      res.status(500).json({ error: "Internal server error" });
+      console.error("Error creating school:", error2);
+      res.status(500).json({ message: "Internal Server Error" });
     }
   });
-  app.post("/students", (req, res) => {
-    const { name, universityId, programId, year } = req.body;
+  app.get("/schools", (req, res) => {
+    const schoolList = schoolStorage.values();
+    res.json(schoolList);
+  });
+  app.post("/student", (req, res) => {
+    const {
+      name,
+      score,
+      preference,
+      registrationNumber,
+      selectedCombination,
+      level
+    } = req.body;
+    if (level === "O-level" && !selectedCombination) {
+      return res.status(400).json({ message: "A-Level students must choose a combination" });
+    }
     const student = {
       id: v4_default(),
       name,
-      universityId,
-      programId,
-      year
+      score,
+      preference,
+      selectedCombination: level === "O-Level" ? selectedCombination : null,
+      level,
+      registrationNumber
     };
-    students.insert(student.id, student);
+    studentStorage.insert(student.id, student);
     res.json(student);
   });
-  app.post("/teachers", (req, res) => {
-    const { name, universityId, courses } = req.body;
-    const teacher = {
-      id: v4_default(),
-      name,
-      universityId,
-      courses
-    };
-    teachers.insert(teacher.id, teacher);
-    res.json(teacher);
+  app.get("/students", (req, res) => {
+    const studentsList = studentStorage.values();
+    res.json(studentsList);
   });
-  app.post("/hods", (req, res) => {
-    const { name, universityId, departmentId } = req.body;
-    const hod = {
-      id: v4_default(),
-      name,
-      universityId,
-      departmentId
-    };
-    hods.insert(hod.id, hod);
-    const departmentOpt = departments.get(departmentId);
-    if ("Some" in departmentOpt) {
-      const department = departmentOpt.Some;
-      department.hodId = hod.id;
-      departments.insert(departmentId, department);
-    }
-    res.json(hod);
-  });
-  app.get("/department-hod/:departmentId", (req, res) => {
-    const departmentId = req.params.departmentId;
-    const departmentOpt = departments.get(departmentId);
-    if ("Some" in departmentOpt) {
-      const hodId = departmentOpt.Some.hodId;
-      const hodOpt = hods.get(hodId);
-      if ("Some" in hodOpt) {
-        res.json(hodOpt.Some);
-      } else {
-        res.status(404).send("HOD not found");
-      }
-    } else {
-      res.status(404).send("Department not found");
-    }
-  });
-  app.post("/departments", (req, res) => {
-    const { name, universityId } = req.body;
-    const department = {
-      id: v4_default(),
-      name,
-      universityId,
-      hodId: ""
-      // Will be set when HOD is assigned
-    };
-    departments.insert(department.id, department);
-    const universityOpt = universities.get(universityId);
-    if ("Some" in universityOpt) {
-      const university = universityOpt.Some;
-      university.departments.push(department.id);
-      universities.insert(universityId, university);
-    }
-    res.json(department);
-  });
-  app.post("/programs", (req, res) => {
-    const { name, departmentId, years, courses } = req.body;
-    const program = {
-      id: v4_default(),
-      name,
-      departmentId,
-      years,
-      courses
-    };
-    programs.insert(program.id, program);
-    res.json(program);
-  });
-  app.post("/assign-course", (req, res) => {
-    const { teacherId, courseId } = req.body;
-    const teacherOpt = teachers.get(teacherId);
-    if ("None" in teacherOpt) {
-      res.status(404).send("Teacher not found");
-    } else {
-      const teacher = teacherOpt.Some;
-      teacher.courses.push(courseId);
-      teachers.insert(teacherId, teacher);
-      res.json(teacher);
-    }
-  });
-  app.get("/course-students/:courseId", (req, res) => {
-    const courseId = req.params.courseId;
-    const courseStudents = students.values().filter((student) => {
-      const programOpt = programs.get(student.programId);
-      return "Some" in programOpt && programOpt.Some.courses.includes(courseId);
+  app.post("/distribute-students", (req, res) => {
+    res.json({
+      message: "AI-based distribution logic will be implemented here"
     });
-    res.json(courseStudents);
-  });
-  app.get("/university-departments/:universityId", (req, res) => {
-    const universityId = req.params.universityId;
-    const universityDepartments = departments.values().filter((dept) => dept.universityId === universityId);
-    res.json(universityDepartments);
   });
   app.use(import_express.default.static("/dist"));
   return app.listen();

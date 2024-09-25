@@ -3,15 +3,15 @@ import Layout from "./layouts/Layout";
 import Home from "./pages/Home";
 import ProfileTemplate from "./pages/Profile";
 
-
 const routes = [
   {
     path: "/",
     element: Layout,
     children: [
-      { path: "", element: Home },
-      { path: "profile", element: ProfileTemplate },
+      { path: "", element: Home, protected: false },
+      { path: "profile", element: ProfileTemplate, protected: true },
     ],
+    protected: true,
   },
   {
     path: "/dashboard",
@@ -19,7 +19,8 @@ const routes = [
     children: [
       // { path: ""},
     ],
-  }
+    protected: true,
+  },
 ];
 
 export default routes;
