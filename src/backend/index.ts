@@ -27,11 +27,14 @@ type School = {
 type Student = {
   id: string;
   name: string;
-  score: number;
+  score: {
+    course: string;
+    marks: number;
+  };
   preference: string[];
-  selectedCombination?: Array<{
+  selectedCombinations?: Array<{
     combinationName: string;
-    School: string;
+    school: string;
   }>;
   level: "O-Level" | "P-Level";
   registrationNumber: string;
@@ -49,7 +52,7 @@ export default Server(() => {
   //School endpoints
   //<-- Create a new school -->
 
-  app.post("/schools", (req, res) => {
+  app.post("/school", (req, res) => {
     const {
       name,
       level,
@@ -127,14 +130,14 @@ export default Server(() => {
       score,
       preference,
       registrationNumber,
-      selectedCombination,
+      selectedCombinations,
       level,
     } = req.body;
 
-    if (level === "O-Level" && !selectedCombination) {
+    if (level === "O-Level" && !selectedCombinations) {
       return res
         .status(400)
-        .json({ message: "A-Level students must choose a combination" });
+        .json({ message: "O-Level students must choose a combination" });
     }
 
     const student: Student = {
@@ -142,7 +145,7 @@ export default Server(() => {
       name,
       score,
       preference,
-      selectedCombination: level === "O-Level" ? selectedCombination : null,
+      selectedCombinations: level === "O-Level" ? selectedCombinations : null,
       level,
       registrationNumber,
     };

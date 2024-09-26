@@ -1,6 +1,8 @@
 import React, { useState, FormEvent, ChangeEvent } from "react";
 import { FaTrashAlt } from "react-icons/fa";
-
+import axios from "axios";
+import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 interface SchoolData {
   name: string;
   status: string;
@@ -12,13 +14,16 @@ interface SchoolData {
 const AddSchoolPage: React.FC = () => {
   const [schoolData, setSchoolData] = useState<SchoolData>({
     name: "",
-    status: "Excellent",
-    level: "A-Level",
+    status: "excellent",
+    level: "O-Level",
     combinations: [],
     capacity: "",
   });
 
   const [combinationInput, setCombinationInput] = useState<string>("");
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  const navigate = useNavigate();
 
   // Handle field changes
   const handleChange = (
@@ -48,9 +53,26 @@ const AddSchoolPage: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(schoolData);
+    // Here we have to handle the form submission
+    setIsLoading(true);
+    try {
+      const response = await axios.post(
+        `${(import.meta as any).env.VITE_CANISTER_ORIGIN}/school`,
+        schoolData
+      );
+
+      const data = await response.data;
+      toast.success("School added successfully");
+      console.log("data", data);
+      setIsLoading(false);
+      navigate("/dashboard/schools");
+    } catch (error) {
+      toast.error("Error adding school");
+      console.log(error);
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -77,9 +99,10 @@ const AddSchoolPage: React.FC = () => {
             onChange={handleChange}
             className="w-full px-4 py-2 border border-gray-300 rounded-md bg-transparent focus:outline-none focus:ring-2 focus:ring-purple-500"
           >
-            <option value="Excellent">Excellent</option>
-            <option value="Very Good">Very Good</option>
-            <option value="Good">Good</option>
+            <option value="excellent">Excellent</option>
+            <option value="good">Good</option>
+            <option value="normal">Normal</option>
+            <option value="daily">DAILY</option>
           </select>
         </div>
 
@@ -91,8 +114,8 @@ const AddSchoolPage: React.FC = () => {
             onChange={handleChange}
             className="w-full px-4 py-2 border border-gray-300 rounded-md bg-transparent focus:outline-none focus:ring-2 focus:ring-purple-500"
           >
-            <option value="A-Level">A-Level</option>
             <option value="O-Level">O-Level</option>
+            <option value="A-Level">A-Level</option>
           </select>
         </div>
 
@@ -155,7 +178,7 @@ const AddSchoolPage: React.FC = () => {
           type="submit"
           className="w-full py-3 bg-purple-600 text-white font-bold rounded-md hover:bg-purple-700 transition-colors"
         >
-          Save School
+          {isLoading ? "Save..." : "Save School"}
         </button>
       </form>
     </section>

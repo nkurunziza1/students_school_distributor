@@ -1,5 +1,8 @@
+import axios from "axios";
 import React, { useState, FormEvent, ChangeEvent } from "react";
+import toast from "react-hot-toast";
 import { FaTrashAlt } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 interface Score {
   course: string;
@@ -40,6 +43,9 @@ const AddStudentPage: React.FC = () => {
 
   const [combinationNameInput, setCombinationNameInput] = useState<string>("");
   const [schoolInput, setSchoolInput] = useState<string>("");
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  const navigate = useNavigate();
 
   // Handle field changes
   const handleChange = (
@@ -104,9 +110,27 @@ const AddStudentPage: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(studentData);
+    setIsLoading(true);
+    try {
+
+      const response = await axios.post(
+        `${(import.meta as any).env.VITE_CANISTER_ORIGIN}/student`,
+        studentData
+      );
+
+      const data = await response.data;
+      toast.success("Student Registered successfully");
+      console.log("data", data);
+      setIsLoading(false);
+      navigate("/dashboard");
+
+    } catch (error) {
+      toast.error("Error While registering student");
+      console.log(error);
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -134,7 +158,7 @@ const AddStudentPage: React.FC = () => {
             className="w-full px-4 py-2 border border-gray-300 rounded-md bg-transparent focus:outline-none focus:ring-2 focus:ring-purple-500"
           >
             <option value="O-Level">O-Level</option>
-            <option value="A-Level">A-Level</option>
+            <option value="A-Level">P-Level</option>
           </select>
         </div>
 
@@ -265,7 +289,7 @@ const AddStudentPage: React.FC = () => {
           type="submit"
           className="w-full px-4 py-2 bg-purple-600 text-white font-bold rounded-md hover:bg-purple-700 transition-colors"
         >
-          Submit
+          {isLoading ? "Submitting..." : "Submit"}
         </button>
       </form>
     </section>

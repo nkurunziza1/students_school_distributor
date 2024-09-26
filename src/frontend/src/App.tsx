@@ -4,10 +4,13 @@ import ScrollToTop from "./components/ui/ScrollToTop";
 
 import React from "react";
 import ProtectedRoute from "./guard/protecteRoutes";
+import{ Toaster } from 'react-hot-toast';
+
 
 const App = () => {
   return (
     <main>
+      <Toaster position="top-right" reverseOrder={false} />
       <Router>
         <Routes>
           {routes.map((route, index) => (
@@ -20,7 +23,7 @@ const App = () => {
                 //     <route.element />
                 //   </ProtectedRoute>
                 // ) : (
-                  <route.element />
+                <route.element />
                 // )
               }
             >
@@ -35,7 +38,7 @@ const App = () => {
                       //     <childRoute.element />
                       //   </ProtectedRoute>
                       // ) : (
-                        <childRoute.element />
+                      <childRoute.element />
                       // )
                     }
                   />
