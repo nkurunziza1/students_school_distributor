@@ -7,7 +7,6 @@ import DistributionPage from "./pages/Dashboard/DistributionsPage";
 import HomePage from "./pages/Dashboard/HomePage";
 import SchoolsPage from "./pages/Dashboard/SchoolsPage";
 import Home from "./pages/Home";
-import ProfileTemplate from "./pages/Profile";
 import ResultsPage from "./pages/ResultsPage";
 
 const routes = [
@@ -18,47 +17,48 @@ const routes = [
       {
         path: "",
         element: Home,
-        //  protected: false
-      },
-      {
-        path: "profile",
-        element: ProfileTemplate,
-        //  protected: true
+         protected: false
       },
       {
         path: "results",
         element: ResultsPage,
-        //  protected: true
+         protected: true
       },
     ],
-    // protected: true,
+    protected: true,
   },
   {
     path: "/dashboard",
+    protected: true,
     element: DahLayout,
     children: [
       { 
         path: "",
-        element:HomePage
+        element:HomePage,
+        protected: true,
       },
       { 
         path: "schools",
-        element:SchoolsPage
+        element:SchoolsPage,
+        protected: true,
       },
       { 
         path: "distributions",
-        element:DistributionPage
+        element:DistributionPage,
+        protected: true,
       },
       { 
         path: "schools/add-school",
-        element:AddSchoolPage
+        element:AddSchoolPage,
+        protected: true,
       },
       { 
         path: "schools/add-student",
-        element:AddStudentPage
+        element:AddStudentPage,
+        protected: true,
       },
     ],
-    // protected: true,
+    
   },
 ];
 

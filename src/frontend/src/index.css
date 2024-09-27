@@ -47,3 +47,13 @@
 select {
   background-color: black;
 }
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 7px;
+  background-color: #2c1250;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #a855f7;
+}

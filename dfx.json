@@ -19,7 +19,8 @@
           "name": "cdk:name",
           "content": "azle"
         }
-      ]
+      ],
+      "max_instructions": 10000000000
     },
     "internet_identity": {
       "type": "custom",

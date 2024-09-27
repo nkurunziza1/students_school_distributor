@@ -4,6 +4,11 @@ import { GoSignOut } from "react-icons/go";
 import React from "react";
 
 const SideNavbar = () => {
+  const handleLogout = async () => {
+    const { logout: destroy } = await import("../auth/auth");
+    destroy();
+  };
+
   return (
     <div className="flex flex-col gap-9 py-4 md:px-2 h-[90vh] fixed text-white xs:bg-slate-200 xs:h-fit glassmorphism items-center justify-center rounded-3xl">
       <Link

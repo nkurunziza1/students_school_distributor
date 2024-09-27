@@ -38,11 +38,26 @@ type Student = {
   }>;
   level: "O-Level" | "P-Level";
   registrationNumber: string;
+  totalMarks: number;
+};
+
+type Distribution = {
+  id: string;
+  level: string;
+  name: string;
+  registrationNumber: string;
+  assignedSchool: string;
+  allocatedCombination?: Array<{
+    combinationName: string;
+    school: string;
+  }>;
+  explanation: string;
+  totalMarks: number;
 };
 
 const schoolStorage = StableBTreeMap<string, School>(0);
 const studentStorage = StableBTreeMap<string, Student>(1);
-const GeneratedDistributed = StableBTreeMap<string, string>(6);
+const GeneratedDistributed = StableBTreeMap<string, Distribution>(6);
 
 export default Server(() => {
   const app = express();
@@ -139,6 +154,15 @@ export default Server(() => {
         .status(400)
         .json({ message: "O-Level students must choose a combination" });
     }
+    const totalObtainedMarks = score.reduce(
+      (total: number, item: { course: string; marks: number }) => {
+        return total + item.marks;
+      },
+      0
+    );
+
+    const maxPossibleMarks = score.length * 100; // Assuming each course is out of 100 marks
+    const totalMarks = (totalObtainedMarks / maxPossibleMarks) * 100;
 
     const student: Student = {
       id: uuidv4(),
@@ -148,6 +172,7 @@ export default Server(() => {
       selectedCombinations: level === "O-Level" ? selectedCombinations : null,
       level,
       registrationNumber,
+      totalMarks: parseFloat(totalMarks.toFixed(2)),
     };
     studentStorage.insert(student.id, student);
     res.json(student);
@@ -159,14 +184,47 @@ export default Server(() => {
     res.json(studentsList);
   });
 
-  // Endpoint for distributing students to schools
-  app.post("/distribute-students", (req, res) => {
-    // Placeholder for AI-based distribution logic
-    // Use students, schools, and their preferences/scores to perform the distribution
-    // AI logic will assign students to schools based on score, preferences, and available slots
-    res.json({
-      message: "AI-based distribution logic will be implemented here",
+  app.post("/distribution", (req, res) => {
+    const distributions = req.body;
+
+    if (!Array.isArray(distributions)) {
+      return res
+        .status(400)
+        .json({ message: "Expected an array of distributions" });
+    }
+
+    const insertedDistributions = distributions.map((distribution) => {
+      const {
+        registrationNumber,
+        assignedSchool,
+        name,
+        allocatedCombination,
+        explanation,
+        level,
+        totalMarks,
+      } = distribution;
+
+      const newDistribution: Distribution = {
+        id: uuidv4(),
+        registrationNumber,
+        assignedSchool,
+        name,
+        allocatedCombination,
+        explanation,
+        totalMarks,
+        level
+      };
+
+      GeneratedDistributed.insert(newDistribution.id, newDistribution);
+      return newDistribution;
     });
+
+    res.json(insertedDistributions);
+  });
+
+  app.get("/distribution", (req, res) => {
+    const distributionList = GeneratedDistributed.values();
+    res.json(distributionList);
   });
 
   app.use(express.static("/dist"));

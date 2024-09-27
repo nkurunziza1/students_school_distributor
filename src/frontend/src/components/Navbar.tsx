@@ -10,17 +10,40 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const open = Boolean(anchorEl);
 
+  const [authenticated, setAuthenticated] = useState(false);
+  const [principal, setPrincipal] = useState("");
+
+  useEffect(() => {
+    const checkAuthentication = async () => {
+      const { isAuthenticated } = await import("../auth/auth");
+      const authStatus = await isAuthenticated();
+      setAuthenticated(authStatus as boolean);
+    };
+    checkAuthentication();
+  }, []);
+
+  useEffect(() => {
+    const fetchPrincipal = async () => {
+      const { getPrincipalText } = await import("../auth/auth");
+      const principal = await getPrincipalText();
+      setPrincipal(principal);
+    };
+    fetchPrincipal();
+  }, []);
+
+  const handleLogin = async () => {
+    const { login } = await import("../auth/auth");
+    login();
+  };
+
+  const handleLogout = async () => {
+    const { logout: destroy } = await import("../auth/auth");
+    destroy();
+  };
+
   useEffect(() => {
     setActiveLink(location.pathname);
   }, [location]);
-
-  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -30,7 +53,7 @@ const Navbar = () => {
     <section className="w-full flex justify-between items-center py-4 px-5 md:px-20 bg-[#270C4A] sticky top-0 z-40">
       {/* Logo */}
       <Link to="/" className="text-xl font-bold text-white flex items-center justify-start w-1/2">
-      <img src="/icons/logo001.svg" width={40} height={40}/>
+        <img src="/icons/logo001.svg" width={40} height={40} />
         AI-NESA
       </Link>
 
@@ -52,11 +75,11 @@ const Navbar = () => {
             key={index}
             to={item.link}
             className={`text-sm ${activeLink === item.link
-                ? "text-purple-600 font-semibold"
-                : "text-white hover:text-purple-400"
+              ? "text-purple-600 font-semibold"
+              : "text-white hover:text-purple-400"
               }`}
           >
-            {item.label}
+            {!authenticated && item.label === "dashboard" ? "" : item.label}
           </Link>
         ))}
         <Link
@@ -66,14 +89,21 @@ const Navbar = () => {
         >
           Contact Us
         </Link>
-        <Link
-          to="/login"
-          onClick={toggleMobileMenu} // Close menu when clicked
-          className="text-sm text-white hover:text-white py-2 px-5 font-bold border border-purple-300"
-        >
-          Log in
-        </Link>
-        
+        {authenticated ? (
+          <button
+            className="text-sm text-white hover:text-white py-2 px-5 font-bold border border-purple-300"
+            onClick={handleLogout}
+          >
+            Logout
+          </button>
+        ) : (
+          <button
+            onClick={handleLogin}
+            className="text-sm text-white hover:text-white py-2 px-5 font-bold border border-purple-300"
+          >
+            Log in
+          </button>)}
+
       </div>
 
       {/* Profile Icon with Dropdown */}
@@ -124,8 +154,8 @@ const Navbar = () => {
               to={item.link}
               onClick={toggleMobileMenu} // Close menu when a link is clicked
               className={`text-sm ${activeLink === item.link
-                  ? "text-purple-600 font-semibold"
-                  : "text-white hover:text-orange-400"
+                ? "text-purple-600 font-semibold"
+                : "text-white hover:text-orange-400"
                 }`}
             >
               {item.label}

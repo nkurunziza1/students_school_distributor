@@ -161,13 +161,11 @@ const Hero = () => {
           transition={{ duration: 0.5 }}
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
-          <div className="rounded-full bg-[#2C1250] border border-blue-500 w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+          <div className="rounded-full bg-[#2C1250] border border-blue-500 w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative flex justify-center items-center overflow-hidden">
             <img
-              src="/images/robot5.svg"
+              src="/icons/logo001.svg"
               alt="hero image"
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              width={300}
-              height={300}
+              className="w-[150px] h-[150px] lg:w-[350px] lg:h-[350px]"
             />
           </div>
         </motion.div>

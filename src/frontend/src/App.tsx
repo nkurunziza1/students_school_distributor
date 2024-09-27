@@ -4,7 +4,7 @@ import ScrollToTop from "./components/ui/ScrollToTop";
 
 import React from "react";
 import ProtectedRoute from "./guard/protecteRoutes";
-import{ Toaster } from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
 
 
 const App = () => {
@@ -18,13 +18,13 @@ const App = () => {
               key={index}
               path={route.path}
               element={
-                // route.protected ? (
-                //   <ProtectedRoute>
-                //     <route.element />
-                //   </ProtectedRoute>
-                // ) : (
-                <route.element />
-                // )
+                route.protected ? (
+                  <ProtectedRoute>
+                    <route.element />
+                  </ProtectedRoute>
+                ) : (
+                  <route.element />
+                )
               }
             >
               {route.children &&
@@ -33,13 +33,13 @@ const App = () => {
                     key={childIndex}
                     path={childRoute.path}
                     element={
-                      // childRoute.protected ? (
-                      //   <ProtectedRoute>
-                      //     <childRoute.element />
-                      //   </ProtectedRoute>
-                      // ) : (
-                      <childRoute.element />
-                      // )
+                      childRoute.protected ? (
+                        <ProtectedRoute>
+                          <childRoute.element />
+                        </ProtectedRoute>
+                      ) : (
+                        <childRoute.element />
+                      )
                     }
                   />
                 ))}

@@ -1,3 +1,40 @@
+enum Status {
+  EXCELLENT = "excellent",
+  GOOD = "good",
+  NORMAL = "normal",
+  DAILY = "daily",
+}
+
+interface Student {
+  id: string;
+  name: string;
+  score: [
+    {
+      course: string;
+      marks: number;
+    }
+  ];
+  preference: string;
+  selectedCombinations?: Array<{
+    combinationName: string;
+    school: string;
+  }>;
+  level: "O-Level" | "P-Level";
+  registrationNumber: string;
+}
+
+interface School {
+  id: string;
+  name: string;
+  status: Status;
+  level: "O-Level" | "A-Level";
+  combinations?: string[];
+  owner: string;
+  capacity: number;
+  availableSlots: number | { totalSlots: number; remainingSlots: number };
+  otherSchoolDetails: any;
+}
+
 export const NavLinks = [
   {
     link: "/",
@@ -21,177 +58,245 @@ export const NavLinks = [
   },
 ];
 
-
-
-export const universities = [
+export const students = [
   {
-    name: "Harvard University",
-    description: "An Ivy League research university in Cambridge, Massachusetts.",
-    location: "Cambridge, Massachusetts, USA",
-    ranking: 1,
-    establishedYear: 1636,
-    departments: [
-      { name: "Engineering", facultyCount: 150, coursesOffered: ["Computer Science", "Mechanical Engineering"] },
-      { name: "Business", facultyCount: 100, coursesOffered: ["MBA", "Finance"] },
+    id: "1",
+    name: "Alice Johnson",
+    score: [
+      { course: "Mathematics", marks: 85 },
+      { course: "English", marks: 78 },
+      { course: "Science", marks: 92 },
     ],
-    studentCount: 21000,
-    website: "https://www.harvard.edu"
+    level: "P-Level",
+    registrationNumber: "P2023001",
+    selectedCombinations: null
   },
   {
-    name: "Stanford University",
-    description: "A prestigious private research university in California.",
-    location: "Stanford, California, USA",
-    ranking: 2,
-    establishedYear: 1885,
-    departments: [
-      { name: "Medicine", facultyCount: 200, coursesOffered: ["Neuroscience", "Cardiology"] },
-      { name: "Law", facultyCount: 80, coursesOffered: ["Corporate Law", "International Law"] },
+    id: "2",
+    name: "Bob Smith",
+    score: [
+      { course: "Mathematics", marks: 92 },
+      { course: "English", marks: 88 },
+      { course: "Physics", marks: 95 },
+      { course: "Chemistry", marks: 90 },
     ],
-    studentCount: 16000,
-    website: "https://www.stanford.edu"
+    level: "O-Level",
+    registrationNumber: "O2023002",
+    selectedCombinations: [
+      { combinationName: "PCM", school: "Excellent High" },
+      { combinationName: "PCB", school: "Good Sciences Academy" },
+    ],
   },
   {
-    name: "University of Oxford",
-    description: "One of the oldest and most prestigious universities in the world.",
-    location: "Oxford, England, UK",
-    ranking: 3,
-    establishedYear: 1096,
-    departments: [
-      { name: "Humanities", facultyCount: 120, coursesOffered: ["Philosophy", "History"] },
-      { name: "Sciences", facultyCount: 150, coursesOffered: ["Physics", "Biology"] },
+    id: "3",
+    name: "Carol Davis",
+    score: [
+      { course: "Mathematics", marks: 78 },
+      { course: "English", marks: 95 },
+      { course: "Biology", marks: 88 },
+      { course: "Chemistry", marks: 82 },
     ],
-    studentCount: 24000,
-    website: "https://www.ox.ac.uk"
+    level: "O-Level",
+    registrationNumber: "O2023003",
+    selectedCombinations: [
+      { combinationName: "BCM", school: "Excellent High" },
+      { combinationName: "MEG", school: "Normal College" },
+    ],
+    
   },
   {
-    name: "California Institute of Technology (Caltech)",
-    description: "A world-renowned science and engineering institute.",
-    location: "Pasadena, California, USA",
-    ranking: 4,
-    establishedYear: 1891,
-    departments: [
-      { name: "Physics", facultyCount: 90, coursesOffered: ["Astrophysics", "Quantum Physics"] },
-      { name: "Chemistry", facultyCount: 60, coursesOffered: ["Organic Chemistry", "Inorganic Chemistry"] },
+    id: "4",
+    name: "David Wilson",
+    score: [
+      { course: "Mathematics", marks: 98 },
+      { course: "Physics", marks: 96 },
+      { course: "Chemistry", marks: 94 },
     ],
-    studentCount: 2200,
-    website: "https://www.caltech.edu"
+    level: "P-Level",
+    registrationNumber: "P2023004",
+    selectedCombinations: null
   },
   {
-    name: "University of Cambridge",
-    description: "A leading academic institution in the UK known for its history and prestige.",
-    location: "Cambridge, England, UK",
-    ranking: 5,
-    establishedYear: 1209,
-    departments: [
-      { name: "Mathematics", facultyCount: 110, coursesOffered: ["Pure Mathematics", "Applied Mathematics"] },
-      { name: "Literature", facultyCount: 90, coursesOffered: ["English Literature", "Comparative Literature"] },
+    id: "5",
+    name: "Eva Brown",
+    score: [
+      { course: "Biology", marks: 92 },
+      { course: "Chemistry", marks: 88 },
+      { course: "Mathematics", marks: 85 },
     ],
-    studentCount: 21000,
-    website: "https://www.cam.ac.uk"
+    level: "P-Level",
+    registrationNumber: "P2023005",
+    selectedCombinations: null
   },
-  {
-    name: "Massachusetts Institute of Technology (MIT)",
-    description: "A leading institution for science, technology, and innovation.",
-    location: "Cambridge, Massachusetts, USA",
-    ranking: 6,
-    establishedYear: 1861,
-    departments: [
-      { name: "Computer Science", facultyCount: 180, coursesOffered: ["Artificial Intelligence", "Data Science"] },
-      { name: "Engineering", facultyCount: 160, coursesOffered: ["Civil Engineering", "Electrical Engineering"] },
-    ],
-    studentCount: 11400,
-    website: "https://www.mit.edu"
-  },
-  {
-    name: "Princeton University",
-    description: "An Ivy League research university known for its excellent liberal arts programs.",
-    location: "Princeton, New Jersey, USA",
-    ranking: 7,
-    establishedYear: 1746,
-    departments: [
-      { name: "Economics", facultyCount: 80, coursesOffered: ["Macroeconomics", "Microeconomics"] },
-      { name: "Political Science", facultyCount: 60, coursesOffered: ["International Relations", "Public Policy"] },
-    ],
-    studentCount: 8200,
-    website: "https://www.princeton.edu"
-  },
-  {
-    name: "University of Chicago",
-    description: "A private university known for its research, economics, and law programs.",
-    location: "Chicago, Illinois, USA",
-    ranking: 8,
-    establishedYear: 1890,
-    departments: [
-      { name: "Economics", facultyCount: 100, coursesOffered: ["Behavioral Economics", "Game Theory"] },
-      { name: "Law", facultyCount: 85, coursesOffered: ["Constitutional Law", "Criminal Law"] },
-    ],
-    studentCount: 17000,
-    website: "https://www.uchicago.edu"
-  },
-  {
-    name: "ETH Zurich",
-    description: "A world-class university known for its cutting-edge research in technology and engineering.",
-    location: "Zurich, Switzerland",
-    ranking: 9,
-    establishedYear: 1855,
-    departments: [
-      { name: "Mechanical Engineering", facultyCount: 150, coursesOffered: ["Robotics", "Energy Systems"] },
-      { name: "Architecture", facultyCount: 60, coursesOffered: ["Urban Design", "Sustainable Architecture"] },
-    ],
-    studentCount: 22000,
-    website: "https://www.ethz.ch"
-  },
-  {
-    name: "University of Tokyo",
-    description: "A top university in Japan, known for its research in sciences and technology.",
-    location: "Tokyo, Japan",
-    ranking: 10,
-    establishedYear: 1877,
-    departments: [
-      { name: "Physics", facultyCount: 90, coursesOffered: ["Nuclear Physics", "Theoretical Physics"] },
-      { name: "Engineering", facultyCount: 100, coursesOffered: ["Civil Engineering", "Electrical Engineering"] },
-    ],
-    studentCount: 28000,
-    website: "https://www.u-tokyo.ac.jp"
-  }
 ];
-
 
 export const schools = [
   {
-    name: "ST Joseph",
-    status: "Excellent",
+    id: "S1",
+    name: "Excellent High",
+    status: Status.EXCELLENT,
     level: "A-Level",
-    combinations: ["MCB", "PCM", "MEG"],
-    capacity: 100,
+    combinations: ["PCM", "BCM", "MEG"],
+    owner: "2vxsx-fae",
+    capacity: 1000,
+    availableSlots: {
+      PCM: { totalSlots: 300, remainingSlots: 150 },
+      BCM: { totalSlots: 300, remainingSlots: 200 },
+      MEG: { totalSlots: 400, remainingSlots: 300 },
+    },
+    otherSchoolDetails: [],
   },
   {
-    name: "Lycee de Kigali",
-    status: "Very Good",
+    id: "S2",
+    name: "Good Sciences Academy",
+    status: Status.GOOD,
     level: "O-Level",
-    combinations: ["MCE", "PCB", "LEG"],
-    capacity: 80,
+    owner: "2vxsx-fae",
+    capacity: 800,
+    availableSlots: 500,
+    otherSchoolDetails: [],
   },
   {
-    name: "Green Hills Academy",
-    status: "Good",
+    id: "S3",
+    name: "Normal College",
+    status: Status.NORMAL,
     level: "A-Level",
-    combinations: ["PCM", "MPC", "MEG"],
-    capacity: 90,
-  },
-  {
-    name: "Kigali International School",
-    status: "Excellent",
-    level: "O-Level",
-    combinations: ["MCB", "HEG", "MPG"],
-    capacity: 120,
-  },
-  {
-    name: "Ecole Belge",
-    status: "Good",
-    level: "A-Level",
-    combinations: ["PCM", "MPC", "MCB"],
-    capacity: 70,
+    combinations: ["PCB", "MCB"],
+    owner: "2vxsx-fae",
+    capacity: 600,
+    availableSlots: {
+      PCB: { totalSlots: 300, remainingSlots: 250 },
+      MCB: { totalSlots: 300, remainingSlots: 280 },
+    },
+    otherSchoolDetails: [],
   },
 ];
 
+
+export const distributedStudents = [
+  {
+    id: "6b3c38a4-c684-41b4-937c-d3cf8c236832",
+    name: "Shema Herve",
+    score: [
+      { course: "Chemistry", marks: 80 },
+      { course: "Mathematics", marks: 90 },
+      { course: "Physics", marks: 80 },
+      { course: "Geography", marks: 60 },
+      { course: "Kinyarwanda", marks: 70 },
+      { course: "English", marks: 40 },
+      { course: "Kiswahili", marks: 50 },
+    ],
+    preference: "",
+    selectedCombinations: [
+      { combinationName: "MCB", school: "GS Remera Rukoma" },
+      { combinationName: "Culinary Arts", school: "Aparpe" },
+      { combinationName: "TTC", school: "Kabwayi High School" },
+    ],
+    level: "O-Level",
+    registrationNumber: "3000",
+    totalMarks: 67.14,
+    assignedSchool: "GS Remera Rukoma",
+    allocatedCombination: "Mathematics, Chemistry, and Biology (MCB)",
+    explanation:
+      "You have been assigned to GS Remera Rukoma as it is an excellent school offering the MCB combination that you prefer. The school matches your O-Level status and accommodates your high total marks.",
+  },
+  {
+    id: "5f4a7b29-2d4c-456a-9b5d-9ef8c2b8c5a7",
+    name: "Irakoze Aime",
+    score: [
+      { course: "Biology", marks: 85 },
+      { course: "Mathematics", marks: 95 },
+      { course: "Physics", marks: 88 },
+      { course: "Geography", marks: 75 },
+      { course: "Kinyarwanda", marks: 65 },
+      { course: "English", marks: 55 },
+      { course: "Kiswahili", marks: 45 },
+    ],
+    preference: "",
+    selectedCombinations: [
+      { combinationName: "PCM", school: "GS Nyamirambo" },
+      { combinationName: "Computer Science", school: "Saint Joseph" },
+      { combinationName: "TTC", school: "Ecole des Sciences Kabgayi" },
+    ],
+    level: "O-Level",
+    registrationNumber: "3100",
+    totalMarks: 72.85,
+    assignedSchool: "GS Nyamirambo",
+    allocatedCombination: "Physics, Chemistry, and Mathematics (PCM)",
+    explanation:
+      "You have been assigned to GS Nyamirambo due to your excellent performance in sciences, aligning with your preference for the PCM combination.",
+  },
+  {
+    id: "af3d8f4c-e5b9-4f44-b4d7-1cbe47b4a8bb",
+    name: "Uwase Sandrine",
+    score: [
+      { course: "History", marks: 78 },
+      { course: "Mathematics", marks: 82 },
+      { course: "Chemistry", marks: 65 },
+      { course: "English", marks: 88 },
+      { course: "Kiswahili", marks: 54 },
+      { course: "Kinyarwanda", marks: 70 },
+    ],
+    preference: "",
+    selectedCombinations: [
+      { combinationName: "MCB", school: "GS Kagugu" },
+      { combinationName: "History and Geography", school: "GS Kabuga" },
+      { combinationName: "Computer Science", school: "Saint Patrick School" },
+    ],
+    level: "O-Level",
+    registrationNumber: "3200",
+    totalMarks: 71.17,
+    assignedSchool: "GS Kagugu",
+    allocatedCombination: "Mathematics, Chemistry, and Biology (MCB)",
+    explanation:
+      "Based on your total marks and preference, you have been assigned to GS Kagugu, which is recognized for offering the MCB combination.",
+  },
+  {
+    id: "7cb3e6d9-bb1f-4c8f-a571-cb5b6f9e5b3f",
+    name: "Ndayisaba Eric",
+    score: [
+      { course: "Chemistry", marks: 70 },
+      { course: "Mathematics", marks: 85 },
+      { course: "Physics", marks: 65 },
+      { course: "English", marks: 78 },
+      { course: "Kinyarwanda", marks: 55 },
+    ],
+    preference: "",
+    selectedCombinations: [
+      { combinationName: "PCM", school: "GS Saint Ignace" },
+      { combinationName: "TTC", school: "Kigali Technical School" },
+      { combinationName: "MCE", school: "GS Saint Marie Reine" },
+    ],
+    level: "O-Level",
+    registrationNumber: "3300",
+    totalMarks: 70.6,
+    assignedSchool: "GS Saint Ignace",
+    allocatedCombination: "Physics, Chemistry, and Mathematics (PCM)",
+    explanation:
+      "You have been assigned to GS Saint Ignace, a school known for strong PCM programs, aligning with your marks and combination preferences.",
+  },
+  {
+    id: "9bdf29d5-29d9-4bcd-96a7-9f2fcb9b72cd",
+    name: "Mukamana Jeannette",
+    score: [
+      { course: "English", marks: 90 },
+      { course: "Mathematics", marks: 85 },
+      { course: "Geography", marks: 78 },
+      { course: "History", marks: 88 },
+      { course: "Kiswahili", marks: 68 },
+    ],
+    preference: "",
+    selectedCombinations: [
+      { combinationName: "HEG", school: "GS Gashora" },
+      { combinationName: "Literature", school: "GS Kigali" },
+      { combinationName: "TTC", school: "GS Nyundo" },
+    ],
+    level: "O-Level",
+    registrationNumber: "3400",
+    totalMarks: 80.2,
+    assignedSchool: "GS Gashora",
+    allocatedCombination: "History, Economics, and Geography (HEG)",
+    explanation:
+      "Your assignment to GS Gashora reflects your strong performance in social sciences, aligning with your preference for the HEG combination.",
+  },
+];

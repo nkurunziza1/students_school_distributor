@@ -1,32 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { motion, AnimatePresence } from "framer-motion";
+import axios from "axios";
+
+type Distribution = {
+  name: string;
+  registrationNumber: string;
+  assignedSchool: string;
+  allocatedCombination?: string;
+  explanation: string;
+  totalMarks: number;
+  level: string;
+};
 
 const ResultsPage = () => {
   const [searchText, setSearchText] = useState("");
   const [selectedLevel, setSelectedLevel] = useState("");
   const [showResults, setShowResults] = useState(false);
-
-  const levels = ["P-LEVEL", "O-LEVEL", "A-LEVEL"];
-
-  // Dummy data for courses, marks, and grades
-  const dummyData = [
-    { course: "Mathematics", marks: 75 },
-    { course: "Science", marks: 80 },
-    { course: "History", marks: 70 },
-    { course: "English", marks: 85 },
-  ];
-
-  const totalMarks = dummyData.reduce((acc, curr) => acc + curr.marks, 0);
-  const totalAverage = (totalMarks / (dummyData.length * 100)) * 100;
-
-  const getGrade = (marks:any) => {
-    if (marks >= 80) return "A";
-    if (marks >= 60) return "B";
-    if (marks >= 50) return "C";
-    if (marks >= 40) return "D";
-    return "F";
-  };
+  const [distributions, setDistributions] = useState<Distribution[]>([]);
+  const [filteredResults, setFilteredResults] = useState<Distribution[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const levels = ["P-Level", "O-Level"];
+  const [isReason, setShowReason] = useState(false);
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchText(event.target.value);
@@ -38,11 +33,37 @@ const ResultsPage = () => {
 
   const handleSearchClick = () => {
     if (searchText && selectedLevel) {
+      const filtered = distributions.filter(
+        (item) =>
+          item.registrationNumber.includes(searchText) &&
+          item.level === selectedLevel
+      );
+      setFilteredResults(filtered);
       setShowResults(true);
     } else {
       setShowResults(false);
     }
   };
+
+  // console.log("selected level", selecte)
+
+  const getDistributions = async () => {
+    setIsLoading(true);
+    const response = await axios.get(
+      `${(import.meta as any).env.VITE_CANISTER_ORIGIN}/distribution`
+    );
+    const data = await response.data;
+    console.log("data for distributions", data)
+    setIsLoading(false);
+    setDistributions(data);
+  };
+
+  useEffect(() => {
+    getDistributions();
+  }, []);
+
+
+  // console.log("get distributions",dis)
 
   return (
     <main className="bg-radial-custom min-h-screen w-full max-w-[1440px] flex flex-col items-center px-5 pt-32 pb-10">
@@ -59,7 +80,7 @@ const ResultsPage = () => {
 
         <div className="flex items-center justify-center mb-4">
           <div className="relative">
-            <button 
+            <button
               onClick={handleSearchClick}
               className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-transparent text-gray-600"
             >
@@ -90,7 +111,7 @@ const ResultsPage = () => {
       </div>
 
       <AnimatePresence>
-        {showResults && (
+        {showResults && filteredResults.length > 0 && (
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -101,40 +122,52 @@ const ResultsPage = () => {
             <table className="w-full border-collapse">
               <thead>
                 <tr>
-                  <th className="border-b-2 border-gray-300 px-4 py-2 text-start">Course Name</th>
-                  <th className="border-b-2 border-gray-300 px-4 py-2 text-start">Marks</th>
-                  <th className="border-b-2 border-gray-300 px-4 py-2 text-start">Total Marks</th>
-                  <th className="border-b-2 border-gray-300 px-4 py-2 text-start">Grade</th>
+                  <th className="border-b-2 border-gray-300 px-4 py-2 text-start">Name</th>
+                  <th className="border-b-2 border-gray-300 px-4 py-2 text-start">Assigned School</th>
+                  <th className="border-b-2 border-gray-300 px-4 py-2 text-start">Level</th>
                 </tr>
               </thead>
               <tbody>
-                {dummyData.map((item, index) => (
+                {filteredResults.map((item, index) => (
                   <tr key={index} className="border-b border-gray-300">
-                    <td className="px-4 py-2">{item.course}</td>
-                    <td className="px-4 py-2">{item.marks}</td>
-                    <td className="px-4 py-2">100</td> {/* Total Marks for each course */}
-                    <td className="px-4 py-2">{getGrade(item.marks)}</td> {/* Get grade based on marks */}
+                    <td className="px-4 py-2">{item.name}</td>
+                    <td className="px-4 py-2">{item.assignedSchool}</td>
+                    <td className="px-4 py-2">{item.level}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
-            <div className="mt-2 flex justify-between">
-              <p className="font-bold">Total Marks: {totalMarks}</p>
-              <p className="font-bold">Average: {totalAverage.toFixed(2)}%</p>
-            </div>
 
-            <p className="mt-4 text-gray-300 font-bold">
-              Assigned School: <span className="font-normal">Remera Rukoma High School</span>
-            </p>
-            <p className="text-gray-300 font-bold">
-              Section: <span className="font-normal">PCB</span>
-            </p>
+            {filteredResults.map((item, index) => (
+              <>
+                <p className="mt-4 text-gray-300 font-bold">
+                  Assigned School: <span className="font-normal">{item.assignedSchool}</span>
+                </p>
+                {item.level === "O-Level" && (
+                  <p className="text-gray-300 font-bold">
+                    Section: <span className="font-normal">{item.allocatedCombination}</span>
+                  </p>
+                )}
+              </>
+            ))}
 
             <div className="mt-6 flex flex-col gap-4">
-              <h1 className="text-gray-300">Explanation of Assignment</h1>
-              <button className="bg-green-500 text-white px-4 py-2 rounded self-start">AI Response</button>
+              <h1 className="text-gray-300">Explanation of Distribution</h1>
+
+              <button className="bg-green-500 text-white px-4 py-2 rounded self-start" onClick={() => setShowReason(!isReason)}>AI Response</button>
+              {isReason && (
+                <div>
+                  {filteredResults.map((item, index) => (
+                    <p key={index}>{item.explanation}</p>
+                  ))}
+                </div>
+              )}
             </div>
           </motion.div>
+        )}
+
+        {showResults && filteredResults.length === 0 && (
+          <p className="text-white">No results found.</p>
         )}
       </AnimatePresence>
     </main>

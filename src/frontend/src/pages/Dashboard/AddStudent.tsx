@@ -38,7 +38,7 @@ const AddStudentPage: React.FC = () => {
     marks: number;
   }>({
     course: "",
-    marks: 0,
+    marks: 0
   });
 
   const [combinationNameInput, setCombinationNameInput] = useState<string>("");
@@ -158,7 +158,7 @@ const AddStudentPage: React.FC = () => {
             className="w-full px-4 py-2 border border-gray-300 rounded-md bg-transparent focus:outline-none focus:ring-2 focus:ring-purple-500"
           >
             <option value="O-Level">O-Level</option>
-            <option value="A-Level">P-Level</option>
+            <option value="P-Level">P-Level</option>
           </select>
         </div>
 

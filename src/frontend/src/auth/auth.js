@@ -23,10 +23,17 @@ export async function getPrincipalText() {
   return (await getPrincipal()).toText();
 }
 
+let authChecked = false;
+
 export async function isAuthenticated() {
+  if (authChecked) {
+    return true; // or return the previously stored auth status
+  }
   try {
     const authClient = await getAuthClient();
-    return await authClient.isAuthenticated();
+    const isAuth = await authClient.isAuthenticated();
+    authChecked = true; // set the flag to prevent repeated checks
+    return isAuth;
   } catch (err) {
     logout();
   }

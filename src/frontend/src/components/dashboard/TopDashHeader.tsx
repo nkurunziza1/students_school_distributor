@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { formatDate } from "../../utils/formatedDate";
 import { FiSearch } from "react-icons/fi";
 import { CiCirclePlus } from "react-icons/ci";
@@ -15,11 +15,45 @@ const TopNavbar = () => {
 
   const currentDate = new Date();
 
+  const [authChecked, setAuthChecked] = useState(false);
+  const [isAuth, setIsAuth] = useState(false);
+  const [principal, setPrincipal] = useState("");
+
+  const AdminPrincipal = 'yf7qr-rcclu-62e74-jcsh5-wsnrs-qz6rt-53n3x-wyz7w-ygtmv-7xlgk-hae';
+
+  useEffect(() => {
+    const checkAuthentication = async () => {
+      const { isAuthenticated } = await import("../../auth/auth");
+      const authStatus = await isAuthenticated();
+      setIsAuth(authStatus as boolean);
+      setAuthChecked(true); // Mark authentication check as complete
+    };
+    checkAuthentication();
+  }, []);
+
+  useEffect(() => {
+    const fetchPrincipal = async () => {
+      const { getPrincipalText } = await import("../../auth/auth");
+      const principal = await getPrincipalText();
+      setPrincipal(principal);
+    };
+
+    if (isAuth) {
+      fetchPrincipal();
+    }
+  }, [isAuth]);
+
+  const handleLogout = async () => {
+    const { logout: destroy } = await import("../../auth/auth");
+    destroy();
+  };
+
+
   return (
     <nav className="border-b py-4 px-2 text-white sticky top-0 z-10 w-full bg-gray-800">
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex flex-col">
-          <h1 className="text-2xl font-bold text-white">Hello, Calvin</h1>
+          <h1 className="text-2xl font-bold text-white">Hello, {principal.slice(0, 7)}...</h1>
           <p className="text-sm font-light text-white">
             {formatDate(currentDate)}
           </p>
@@ -91,12 +125,12 @@ const TopNavbar = () => {
               >
                 Settings
               </a>
-              <a
-                href="#"
+              <p
+                onClick={handleLogout}
                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
               >
                 Logout
-              </a>
+              </p>
             </div>
           )}
         </div>

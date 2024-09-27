@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
-import { schools } from "../../constants";
 import axios from "axios";
 
 enum Status {
