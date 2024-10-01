@@ -105,7 +105,6 @@ export default Server(() => {
           };
         });
       } else {
-        // For O-Level, use overall capacity
         availableSlots = capacity;
       }
 
@@ -161,7 +160,7 @@ export default Server(() => {
       0
     );
 
-    const maxPossibleMarks = score.length * 100; // Assuming each course is out of 100 marks
+    const maxPossibleMarks = score.length * 100;
     const totalMarks = (totalObtainedMarks / maxPossibleMarks) * 100;
 
     const student: Student = {

@@ -1,95 +1,51 @@
-# Azle Hello World
+# AI-Driven student distributor
 
--   [Installation](#installation)
--   [Deployment](#deployment)
--   [Examples](#examples)
+- [Installation](#installation)
+- [Deployment](#deployment)
+- [Manually Test](#test)
 
-Azle helps you to build secure decentralized/replicated servers in TypeScript or JavaScript on [ICP](https://internetcomputer.org/). The current replication factor is [13-40 times](https://dashboard.internetcomputer.org/subnets).
+AI and Blockchain Powered Student-School Allocation System, is an innovative Ed-Tech solution designed to match students to schools based on their grades, preferences, and available school capacity. By leveraging cutting-edge AI, it ensures fair and efficient placements, while also considering the status of each school. The system fills schools optimally without overcrowding and adjusts in real-time as new data comes in.
 
-For more documentation please see [The Azle Book](https://demergent-labs.github.io/azle/).
-
-Please remember that Azle is in beta and thus it may have unknown security vulnerabilities due to the following:
-
--   Azle is built with various software packages that have not yet reached maturity
--   Azle does not yet have multiple independent security reviews/audits
--   Azle does not yet have many live, successful, continuously operating applications deployed to ICP
+To enhance trust and transparency, this Ed-Tech system integrates blockchain technology. Every decision in the student placement process is securely recorded and cannot be altered, offering a clear and reliable way for students, parents, and schools to understand how decisions are made, ensuring fairness for everyone involved.
 
 ## Installation
 
-> Windows is only supported through a Linux virtual environment of some kind, such as [WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
-
-On Ubuntu/WSL:
-
 ```bash
-sudo apt-get install podman
+git clone <repo>
+
+npm install
+
 ```
 
-On Mac:
-
 ```bash
-brew install podman
-```
+cd src/frontend
 
-It's recommended to use nvm and Node.js 20:
+npm install
 
-```bash
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-```
-
-Restart your terminal and then run:
-
-```bash
-nvm install 20
-```
-
-Check that the installation went smoothly by looking for clean output from the following command:
-
-```bash
-node --version
-```
-
-Install the dfx command line tools for managing ICP applications:
-
-```bash
-DFX_VERSION=0.16.1 sh -ci "$(curl -fsSL https://sdk.dfinity.org/install.sh)"
-```
-
-Check that the installation went smoothly by looking for clean output from the following command:
-
-```bash
-dfx --version
-```
-
-If after trying to run `dfx --version` you encounter an error such as `dfx: command not found`, you might need to add `$HOME/bin` to your path. Here's an example of doing this in your `.bashrc`:
-
-```bash
-echo 'export PATH="$PATH:$HOME/bin"' >> "$HOME/.bashrc"
+run ./deploy-local-identity.sh
 ```
 
 ## Deployment
 
+In a root terminal `students_school_distributor` directory:
+
 ```bash
-npx azle new hello_world
-cd hello_world
-
-npm install
-
 dfx start --clean --host 127.0.0.1:8000
 ```
 
-In a separate terminal in the `hello_world` directory:
+In a separate terminal in the `students_school_distributor` directory:
 
 ```bash
 dfx deploy
 ```
 
-If you are building an HTTP-based canister and would like your canister to autoreload on file changes (DO NOT deploy to mainnet with autoreload enabled):
+Check If you have all environment variables
 
 ```bash
-AZLE_AUTORELOAD=true dfx deploy
+.Env
+VITE_IDENTITY_CANISTER_ID=bd3sg-teaaa-aaaaa-qaaba-cai
+VITE_OPENAI_API_KEY=KsOdw0sxTnTchrOfPLtHH3MAzAp0E4opUSl48Phl
 ```
-
-If you have problems deploying see [Common deployment issues](https://demergent-labs.github.io/azle/deployment.html#common-deployment-issues).
 
 View your frontend in a web browser at `http://[canisterId].localhost:8000`.
 
@@ -99,22 +55,26 @@ To obtain your application's [canisterId]:
 dfx canister id backend
 ```
 
-Communicate with your canister using any HTTP client library, for example using `curl`:
+## Manually Test
 
-```bash
-curl http://[canisterId].localhost:8000/db
-curl -X POST -H "Content-Type: application/json" -d "{ \"hello\": \"world\" }" http://[canisterId].localhost:8000/db/update
-```
+### `Login with internet Identity`
 
-## Examples
+### Navigate to the `Dashboard page`
 
-There are many Azle examples in the [examples directory](https://github.com/demergent-labs/azle/tree/main/examples). We recommend starting with the following:
+### Navigate to `student`
 
--   [apollo_server](https://github.com/demergent-labs/azle/tree/main/examples/apollo_server)
--   [ethers](https://github.com/demergent-labs/azle/tree/main/examples/ethers)
--   [express](https://github.com/demergent-labs/azle/tree/main/examples/express)
--   [fs](https://github.com/demergent-labs/azle/tree/main/examples/fs)
--   [hello_world](https://github.com/demergent-labs/azle/tree/main/examples/hello_world)
--   [ic_evm_rpc](https://github.com/demergent-labs/azle/tree/main/examples/ic_evm_rpc)
--   [sqlite](https://github.com/demergent-labs/azle/tree/main/examples/sqlite)
--   [web_assembly](https://github.com/demergent-labs/azle/tree/main/examples/web_assembly)
+Create students for purpose of having student data to be distributed.
+
+### Navigate to `school`
+
+Create school for purpose of having school data.
+
+### Navigate to `distribution page `
+
+`Click` on `distributing students` where our AI distribute students to the schools based on the marks, preference, available slots to given school.
+
+`Click ` on `Save Distribution` for saving data to our database
+
+### Navigate to `Home`
+
+`Click` on View result.Then search student distribution according the registration number and level
