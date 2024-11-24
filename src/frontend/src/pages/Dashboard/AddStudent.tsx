@@ -191,13 +191,14 @@ const AddStudentPage: React.FC = () => {
             />
             <input
               type="number"
-              value={scoreInput.marks}
+              value={scoreInput.marks === 0 ? '' : scoreInput.marks}
               onChange={(e) =>
                 setScoreInput({ ...scoreInput, marks: Number(e.target.value) })
               }
               className="w-full px-4 py-2 border border-gray-300 rounded-md bg-transparent focus:outline-none focus:ring-2 focus:ring-purple-500"
-              placeholder="Marks"
+              placeholder="Enter marks"
             />
+
             <button
               onClick={handleAddScore}
               className="px-4 py-2 bg-purple-600 text-white font-bold rounded-md hover:bg-purple-700 transition-colors"
@@ -233,7 +234,7 @@ const AddStudentPage: React.FC = () => {
         {studentData.level === "O-Level" && (
           <div>
             <label className="block text-sm font-medium mb-1">
-              Combinations
+              Chosen Combinations
             </label>
             <div className="flex gap-2 mb-2">
               <input
@@ -248,7 +249,7 @@ const AddStudentPage: React.FC = () => {
                 value={schoolInput}
                 onChange={(e) => setSchoolInput(e.target.value)}
                 className="w-full px-4 py-2 border border-gray-300 rounded-md bg-transparent focus:outline-none focus:ring-2 focus:ring-purple-500"
-                placeholder="School (e.g., High School)"
+                placeholder="School (e.g: Byimana tss)"
               />
               <button
                 onClick={(e) => {

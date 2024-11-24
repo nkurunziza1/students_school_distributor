@@ -10,22 +10,26 @@ To enhance trust and transparency, this Ed-Tech system integrates blockchain tec
 
 ## Installation
 
-```bash
-git clone <repo>
+## Requirements
 
+```bash
+dfx Version: 0.23.0
+```
+
+## Get started and installation
+
+Clone the [students_school_distributor](https://github.com/nkurunziza1/students_school_distributor/) repository:
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/nkurunziza1/students_school_distributor/
+cd students_school_distributor
 npm install
 
 ```
 
-```bash
-cd src/frontend
-
-npm install
-
-run ./deploy-local-identity.sh
-```
-
-## Deployment
+2. Start server
 
 In a root terminal `students_school_distributor` directory:
 
@@ -33,11 +37,18 @@ In a root terminal `students_school_distributor` directory:
 dfx start --clean --host 127.0.0.1:8000
 ```
 
-In a separate terminal in the `students_school_distributor` directory:
+Open another terminal in the `students_school_distributor` directory:
 
 ```bash
-dfx deploy
+cd src/frontend
+Create env file  `touch .env`
+npm install
+run ./deploy-local-identity.sh
+add openai api key
+VITE_OPENAI_API_KEY=KsOdw0sxTnTchrOfPLtHH3MAzAp0E4opUSl48Phl
 ```
+
+Now You have finished to generate the internet identity canister. Check it in the env file
 
 Check If you have all environment variables
 
@@ -47,34 +58,42 @@ VITE_IDENTITY_CANISTER_ID=bd3sg-teaaa-aaaaa-qaaba-cai
 VITE_OPENAI_API_KEY=KsOdw0sxTnTchrOfPLtHH3MAzAp0E4opUSl48Phl
 ```
 
-View your frontend in a web browser at `http://[canisterId].localhost:8000`.
+## Deployment
 
-To obtain your application's [canisterId]:
+In a separate terminal in the `students_school_distributor` directory:
 
 ```bash
-dfx canister id backend
+dfx deploy
 ```
 
-## Manually Test
+View your frontend in a web browser at `http://[canisterId].localhost:8000`.
 
-### `Login with internet Identity`
 
-### Navigate to the `Dashboard page`
 
-### Navigate to `student`
+## Test
+
+What we are going to do here is test the functionalities of our application. First, we will create student and school data, and then we will distribute students to schools, assisted by our AI.
+
+## Manually Testing of Functionalities
+
+### `1.Login with internet Identity`
+
+### 2. Navigate to the `Dashboard page`
+
+### 3. Navigate to `student`
 
 Create students for purpose of having student data to be distributed.
 
-### Navigate to `school`
+### 4. Navigate to `school`
 
 Create school for purpose of having school data.
 
-### Navigate to `distribution page `
+### 5. Navigate to `distribution page `
 
 `Click` on `distributing students` where our AI distribute students to the schools based on the marks, preference, available slots to given school.
 
 `Click ` on `Save Distribution` for saving data to our database
 
-### Navigate to `Home`
+### 6. Navigate to `Home`
 
 `Click` on View result.Then search student distribution according the registration number and level
