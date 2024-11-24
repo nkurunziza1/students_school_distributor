@@ -80,13 +80,20 @@ What we are going to do here is test the functionalities of our application. Fir
 
 ### 2. Navigate to the `Dashboard page`
 
+![image](https://github.com/nkurunziza1/students_school_distributor/blob/70a22875f9578d4fcb92b7b4e4dfedb3df70274a/step1_dashboard.png)
+
 ### 3. Navigate to `student`
 
 Create students for purpose of having student data to be distributed.
 
+![image](https://github.com/nkurunziza1/students_school_distributor/blob/70a22875f9578d4fcb92b7b4e4dfedb3df70274a/step2_student.png)
+![image](https://github.com/nkurunziza1/students_school_distributor/blob/70a22875f9578d4fcb92b7b4e4dfedb3df70274a/step22_student.png)
+
 ### 4. Navigate to `school`
 
 Create school for purpose of having school data.
+
+![image](https://github.com/nkurunziza1/students_school_distributor/blob/70a22875f9578d4fcb92b7b4e4dfedb3df70274a/step3_school.png)
 
 ### 5. Navigate to `distribution page `
 
@@ -94,6 +101,13 @@ Create school for purpose of having school data.
 
 `Click ` on `Save Distribution` for saving data to our database
 
+![image](https://github.com/nkurunziza1/students_school_distributor/blob/70a22875f9578d4fcb92b7b4e4dfedb3df70274a/step4_distribution.png)
+![image](https://github.com/nkurunziza1/students_school_distributor/blob/70a22875f9578d4fcb92b7b4e4dfedb3df70274a/step4_distribute.png)
+![image](https://github.com/nkurunziza1/students_school_distributor/blob/70a22875f9578d4fcb92b7b4e4dfedb3df70274a/step4_save%20distributions.png)
+
 ### 6. Navigate to `Home`
 
 `Click` on View result.Then search student distribution according the registration number and level
+
+![image](https://github.com/nkurunziza1/students_school_distributor/blob/70a22875f9578d4fcb92b7b4e4dfedb3df70274a/step6_home.png)
+![image](https://github.com/nkurunziza1/students_school_distributor/blob/70a22875f9578d4fcb92b7b4e4dfedb3df70274a/step7_viewResult.png)
